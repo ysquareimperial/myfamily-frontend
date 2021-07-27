@@ -1,0 +1,17 @@
+
+.glow span {
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 10px #0ba9ca, 0 0 10px #0ba9ca, 0 0 10px #0ba9ca, 0 0 10px #0ba9ca;
+    animation: blink 2.0s infinite alternate;
+}
+
+.glow .minor {
+    display: block;
+    font-size: 30px;
+}
+
+@keyframes blink {
+    100% {
+        text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+    }
+}

@@ -1,0 +1,43 @@
+.row0 {
+    overflow: hidden;
+}
+
+.row1 {
+    background-color: #010c1a;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.col1, .col3 {
+    background-color: #04162C;
+}
+
+/* .col1, .col3 {
+    background-color: #0c284b;
+} */
+
+.dsa {
+    background-color: #39424870;
+    
+}
+
+
+.indeximg {
+    width: 90px;
+    height: 50px;
+}
+
+.hover:hover {
+    cursor: pointer;
+    border-bottom: 1px white solid;
+}
+
+.famName:hover {
+    cursor: pointer;
+    border-bottom: 1px white solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
