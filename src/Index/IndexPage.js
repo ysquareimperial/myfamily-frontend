@@ -4,21 +4,22 @@ import image from './mf-logo.png'
 import { Link } from 'react-router-dom'
 import { IoSettingsOutline, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import HomeComp from '../Components/HomeComp'
-import FamiliesComp from '../Components/FamiliesComp'
-import ChatComp from '../Components/ChatComp'
-import VoiceCallComp from '../Components/VoiceCallComp'
-import VideoCallComp from '../Components/VideoCallComp'
-import EventsComp from '../Components/EventsComp'
-import SupportFamComp from '../Components/SupportFamComp'
-import MemoriesComp from '../Components/MemoriesComp'
-import NotificationsComp from '../Components/NotificationsComp'
-import CreateFamily from '../Components/CreateFamily'
-import IndexLeftMenu from '../Components/IndexLeftMenu'
-import Profile from '../Components/Profile'
-import ViewFamily from '../Components/ViewFamily'
-import Visitation from '../Components/Visitation'
-import SettingsPrivacy from '../Components/SettingsPrivacy'
+import HomeComp from '../Home/HomeComp'
+import FamiliesComp from '../Families/FamiliesComp'
+import ChatComp from '../Chat/ChatComp'
+import VoiceCallComp from '../VoiceCall/VoiceCallComp'
+import VideoCallComp from '../VideoCall/VideoCallComp'
+import EventsComp from '../Events/EventsComp'
+import SupportFamComp from '../SupportFamily/SupportFamComp'
+import MemoriesComp from '../Memories/MemoriesComp'
+import NotificationsComp from '../Notifications/NotificationsComp'
+import CreateFamily from '../Families/CreateFamily'
+import IndexLeftMenu from './IndexLeftMenu'
+import Profile from '../Profile/Profile'
+import ViewFamily from '../Families/ViewFamily'
+import Visitation from '../Visitations/Visitation'
+import SettingsPrivacy from '../Settings/SettingsPrivacy'
+import IndexRightMenu from './IndexRightMenu'
 export default function IndexPage() {
     let date = new Date().getFullYear()
     return (
@@ -86,29 +87,9 @@ export default function IndexPage() {
                             <Route path="/profile" component={Profile} />
                             <Route path="/settings & privacy" component={SettingsPrivacy} />
                         </Switch>
-
-
                     </div>
                     <div className="col-md-3 col3">
-                        <h4 className="display-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
-                            <IoPeopleOutline size="1.3em" color="#0275d8" /> Family Membes...</h4>
-                        <div className="">
-                            <input style={{
-                                backgroundColor: "#04162C",
-                                borderRadius: 19,
-                                color: 'white',
-                                width: 170,
-                                alignContent: "center"
-                            }} type="search" className="form-control" placeholder="Search a member" />
-                        </div>
-                        <div className="pt-2">
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                            <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                        </div>
+                            <IndexRightMenu/>
                     </div>
                 </div>
             </Router>

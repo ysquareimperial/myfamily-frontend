@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoTimeOutline } from 'react-icons/io5'
 import { GoLocation } from "react-icons/go";
-import profile from './yasir.jpeg'
+import profile from '../Images/yasir.jpeg'
 export default function Visitation() {
     return (
         <div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ProfileTab from './ProfileTab';
+import ProfileTab from '../Profile/ProfileTab';
 export default function Profile(profile, handleProfileChange) {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);

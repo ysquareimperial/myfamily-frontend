@@ -1,5 +1,5 @@
 import React from 'react'
-import profileimg from './yasir.jpeg'
+import profileimg from '../Images/yasir.jpeg'
 import './Notifications.css'
 import { IoHeartOutline, IoPersonCircleOutline,IoHeartDislikeOutline, IoPeopleOutline,IoChatboxEllipsesOutline,IoShareSocialOutline } from 'react-icons/io5'
 import {BsDownload} from 'react-icons/bs'

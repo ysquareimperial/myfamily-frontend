@@ -1,8 +1,7 @@
 import React from 'react'
 import { IoTimeOutline, IoCalendarClearOutline, IoPeopleOutline, IoEllipsisVerticalOutline, IoPersonOutline, IoPricetagsOutline } from 'react-icons/io5'
 import { GoLocation } from "react-icons/go";
-
-import profile from './yasir.jpeg'
+import profile from '../Images/yasir.jpg'
 export default function VeiwEvent() {
     return (
         <div>

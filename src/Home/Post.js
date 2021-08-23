@@ -6,7 +6,7 @@ import { RiVideoLine } from 'react-icons/ri'
 import CustomTextField from '../CustomFiles/CustomTextField'
 export default function Post() {
     return (
-        <div>
+        <div style={{borderRadius:10}}>
             <div className="row">
                 <div className="col-md-12 homeBorder">
                     <div className="input-group mb-3 pt-2">

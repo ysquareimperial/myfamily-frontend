@@ -14,7 +14,7 @@ export default function HomePage() {
                 <div className="col-md-5 pt-1 left">
                     <SignInRep />
                 </div>
-                
+
                 <div className="col-md-7 right px-0 py-0 right" style={{
                     position: "relative",
                     textAlign: "center"

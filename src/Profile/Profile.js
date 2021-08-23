@@ -4,8 +4,7 @@ import { GoLocation } from "react-icons/go";
 import { FaBirthdayCake } from "react-icons/fa";
 import { IoPeopleOutline } from 'react-icons/io5'
 import { BsDownload } from "react-icons/bs";
-import profileimg from './yasir.jpeg'
-import image from './yasir.jpeg'
+import profileimg from '../Images/yasir.jpeg'
 import CustomInput from '../CustomFiles/CustomInput';
 import CustomTextField from '../CustomFiles/CustomTextField';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';

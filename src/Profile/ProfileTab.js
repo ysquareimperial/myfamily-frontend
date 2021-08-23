@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Media from './MediaTab';
 import Posts from './PostsTab';
 import PostsTab from './PostsTab';
-import Downloads from './Downloads';
+import Downloads from '../Profile/Downloads';
 
 export default function ProfileTab() {
     const [modal, setModal] = useState(false);

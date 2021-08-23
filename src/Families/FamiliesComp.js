@@ -3,8 +3,33 @@ import CustomInput from '../CustomFiles/CustomInput';
 import CustomTextField from '../CustomFiles/CustomTextField';
 import CustomButton from '../CustomFiles/CustomButton'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
-import image from './yasir.jpeg'
-export default function FamiliesComp(createFamily, handleCreateFamilyChange) {
+import image from '../Images/yasir.jpeg'
+
+export default function FamiliesComp() {
+    const [createFamily, setCreateFamily] = useState({
+        familyName: '',
+        familyImage: '',
+        familyAbout: ''
+    })
+    const reset = () => {
+        setCreateFamily({
+            familyName: '',
+            familyImage: '',
+            familyAbout: ''
+        }
+        )
+    }
+    const handleCreateFamilyChange = ({ target: { name, value } }) => {
+        setCreateFamily(prev => ({ ...prev, [name]: value }))
+    }
+
+    const handleSubmit = () => {
+        reset()
+        let obj = {
+            createFamily
+        }
+        console.log(obj)
+    }
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
@@ -39,7 +64,7 @@ export default function FamiliesComp(createFamily, handleCreateFamilyChange) {
                                         label="Family Image"
                                         name="familyImage"
                                         type="file"
-                                        value={createFamily.FamilyImage}
+                                        value={createFamily.familyImage}
                                         handleChange={handleCreateFamilyChange}
                                     />
                                 </div>
@@ -62,7 +87,7 @@ export default function FamiliesComp(createFamily, handleCreateFamilyChange) {
                         </ModalBody>
                         <ModalFooter>
                             <Button style={{ borderRadius: 20 }} color="outline-secondary" onClick={toggle}>Cancel</Button>
-                            <Button style={{ borderRadius: 20 }} color="outline-success" onClick={toggle}>Create</Button>
+                            <Button style={{ borderRadius: 20 }} color="outline-success" onClick={toggle, handleSubmit}>Create</Button>
                         </ModalFooter>
                     </Modal>
                 </div>
@@ -98,30 +123,30 @@ export default function FamiliesComp(createFamily, handleCreateFamilyChange) {
                 </div>
 
                 <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        ghjk
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                ghjk
                 <div className="col-md-1"></div>
             </div>
         </div>
