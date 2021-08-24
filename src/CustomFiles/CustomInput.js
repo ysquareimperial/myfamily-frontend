@@ -4,6 +4,13 @@ export default function CustomInput({ name = '', label = '', value = '', onfocus
         <div>
             <label>{label}</label>
             <input
+            style={{
+                backgroundColor: "#04162C",
+                borderRadius: 19,
+                color: 'white',
+                width: "96%",
+                alignContent: "center",
+                borderColor: '#0b2e5c'}}
                 className="form-control"
                 onFocus={onfocus}
                 name={name}

@@ -45,10 +45,10 @@ export default function FamiliesComp() {
                     <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Families</p>
                 </div>
                 <div className="col-md-3">
-                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5, width:140 }}>Create a Family</button>
-                    <Modal isOpen={modal} toggle={toggle}>
-                        <ModalBody>
-                            <p className="text-primary" style={{ fontWeight: "bold", fontSize: 20 }}>Create Family</p>
+                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5, width: 140 }}>Create a Family</button>
+                    <Modal isOpen={modal} toggle={toggle} className="text-white">
+                        <ModalBody style={{ backgroundColor: "#04162C" }}>
+                            <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Create Family</p>
                             <div className="row p-2">
                                 <div className="col-md-12 form-group" >
                                     <CustomInput className="form-control"
@@ -71,7 +71,7 @@ export default function FamiliesComp() {
                                 <div className="col-md-12 form-group">
                                     <CustomTextField
                                         label="About Family"
-                                        name="aboutFamily"
+                                        name="familyAbout"
                                         type="text"
                                         value={createFamily.famlyAbout}
                                         handleChange={handleCreateFamilyChange}
@@ -85,9 +85,9 @@ export default function FamiliesComp() {
                                 </div>
                             </div>
                         </ModalBody>
-                        <ModalFooter>
-                            <Button style={{ borderRadius: 20 }} color="outline-secondary" onClick={toggle}>Cancel</Button>
-                            <Button style={{ borderRadius: 20 }} color="outline-success" onClick={toggle, handleSubmit}>Create</Button>
+                        <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#0b2e5c' }}>
+                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Cancel</Button>
+                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle, handleSubmit}>Create</Button>
                         </ModalFooter>
                     </Modal>
                 </div>
