@@ -32,11 +32,6 @@ export default function FamiliesComp() {
     }
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-
-    const [activeTab, setActiveTab] = useState('0');
-    const toggle2 = tab => {
-        if (activeTab !== tab) setActiveTab(tab);
-    }
     return (
         <div>
             <div className="row homeBorder">
@@ -46,7 +41,7 @@ export default function FamiliesComp() {
                 </div>
                 <div className="col-md-3">
                     <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5, width: 140 }}>Create a Family</button>
-                    <Modal isOpen={modal} toggle={toggle} className="text-white">
+                    <Modal isOpen={modal} toggle={toggle} className="text-white" style={{}}>
                         <ModalBody style={{ backgroundColor: "#04162C" }}>
                             <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Create Family</p>
                             <div className="row p-2">
@@ -69,12 +64,19 @@ export default function FamiliesComp() {
                                     />
                                 </div>
                                 <div className="col-md-12 form-group">
-                                    <CustomTextField
+                                    <textarea
+                                        style={{
+                                            backgroundColor: "#04162C",
+                                            borderRadius: 19,
+                                            color: 'white',
+                                            width: "96%",
+                                            alignContent: "center",
+                                            borderColor: '#0b2e5c'
+                                        }}
                                         label="About Family"
                                         name="familyAbout"
-                                        type="text"
                                         value={createFamily.famlyAbout}
-                                        handleChange={handleCreateFamilyChange}
+                                        onChange={handleCreateFamilyChange}
                                     />
                                 </div>
                                 <div className="col-md-12 pt-2">
@@ -87,7 +89,7 @@ export default function FamiliesComp() {
                         </ModalBody>
                         <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#0b2e5c' }}>
                             <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Cancel</Button>
-                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle, handleSubmit}>Create</Button>
+                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Create</Button>
                         </ModalFooter>
                     </Modal>
                 </div>

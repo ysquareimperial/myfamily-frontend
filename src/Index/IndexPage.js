@@ -2,6 +2,7 @@ import React from 'react'
 import './IndexPage.css'
 import image from './mf-logo.png'
 import { Link } from 'react-router-dom'
+import { GoSignOut } from 'react-icons/go'
 import { IoSettingsOutline, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import HomeComp from '../Home/HomeComp'
@@ -25,7 +26,7 @@ export default function IndexPage() {
     return (
         <div className="row0">
             <Router>
-                <div className="row row1 p-3 ">
+                <div className="row row1 p-3">
                     <div className="col-md-1">
                         <Link to="/">
                             <img className="indxeimg" src={image} alt="mfLogo" />
@@ -39,23 +40,23 @@ export default function IndexPage() {
                             }}>Family name will be here.</h3>
                         </Link>
                     </div>
-                    <div className="col-md-2">
-                    </div>
-                    <div className="col-md-3">
-                        <Link to='/profile'>
+
+                    <div className="col-md-5">
+                        {/* <Link to='/profile'>
                             <h5 className="hover mr-5 " style={{
                                 fontWeight: "bolder",
                                 display: "inline-block"
                             }}>
                                 <IoPersonCircleOutline size="2em" color="#0275d8" />@ysquareimperial</h5>
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className="col-md-2">
                         <Link to='/notifications'>
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
-                                paddingRight:20
+                                marginLeft: 80
+
                             }}>
                                 <IoNotificationsCircleOutline size="2em" color="#0275d8" /></h5>
                         </Link>
@@ -63,9 +64,15 @@ export default function IndexPage() {
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
+                                marginLeft: ""
                             }}>
                                 <IoSettingsOutline size="1.7em" color="#0275d8" /></h5>
                         </Link>
+                        <h5 className="hover" style={{
+                            marginTop:5,
+                            float: 'right'
+                        }}>
+                            <GoSignOut size="1.7em" color="#0275d8" /></h5>
                     </div>
                 </div>
 
@@ -89,7 +96,7 @@ export default function IndexPage() {
                         </Switch>
                     </div>
                     <div className="col-md-3 col3">
-                            <IndexRightMenu/>
+                        <IndexRightMenu />
                     </div>
                 </div>
             </Router>
