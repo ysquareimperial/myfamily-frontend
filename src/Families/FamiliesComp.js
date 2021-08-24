@@ -45,7 +45,7 @@ export default function FamiliesComp() {
                     <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Families</p>
                 </div>
                 <div className="col-md-3">
-                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5 }}>Create a Family</button>
+                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5, width:140 }}>Create a Family</button>
                     <Modal isOpen={modal} toggle={toggle}>
                         <ModalBody>
                             <p className="text-primary" style={{ fontWeight: "bold", fontSize: 20 }}>Create Family</p>

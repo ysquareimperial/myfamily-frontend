@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { BsDownload } from "react-icons/bs";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
 import { IoPersonCircleOutline, IoEllipsisVerticalOutline, IoHeartOutline, IoHeartDislikeOutline, IoChatboxEllipsesOutline, IoShareSocialOutline } from 'react-icons/io5'
 import image from '../Images/yasir.jpeg'
+import PostEngagements from './PostEngagements';
 import './HomeComp.css'
 import Post from './Post'
 export default function HomeComp(props) {
@@ -17,9 +19,9 @@ export default function HomeComp(props) {
     return (
         <div>
             <div>
-                <Modal isOpen={modal1} toggle1={toggle1} className={className} style={{ backgroundColor: "#04162C" }}>
+                <Modal isOpen={modal1} toggle1={toggle1} className={className}>
                     {/* <ModalHeader toggle1={toggle1}>Missing Person Form</ModalHeader> */}
-                    <ModalBody style={{ backgroundColor: "#04162C" }}>
+                    <ModalBody style={{ backgroundColor: "#04162C", borderColor: "#04162C" }}>
                         <div className="row">
                             <div className='col-md-6'>
                                 <h5>Add a new post</h5>
@@ -78,21 +80,7 @@ export default function HomeComp(props) {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col mt-2 text-white">
-                                        <IoHeartOutline color="#0275d8" size="1.5em" /> 51
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoHeartDislikeOutline color="#0275d8" size="1.5em" /> 31
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" /> 10
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoShareSocialOutline color="#0275d8" size="1.5em" /> 75
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <BsDownload color="#0275d8" size="1.5em" />
-                                    </div>
+                                    <PostEngagements/>
                                 </div>
                             </div>
                             <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
@@ -121,21 +109,7 @@ export default function HomeComp(props) {
                                 </div>
                                 <img src={image} alt="post" style={{ height: 600 }} />
                                 <div className="row">
-                                    <div className="col mt-2 text-white">
-                                        <IoHeartOutline color="#0275d8" size="1.5em" /> 51
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoHeartDislikeOutline color="#0275d8" size="1.5em" /> 31
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" /> 10
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <IoShareSocialOutline color="#0275d8" size="1.5em" /> 75
-                                    </div>
-                                    <div className="col mt-2 text-white">
-                                        <BsDownload color="#0275d8" size="1.5em" />
-                                    </div>
+                                   <PostEngagements/>
                                 </div>
                             </div>
 
