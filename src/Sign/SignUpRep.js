@@ -38,7 +38,7 @@ export default function SignUpRep() {
         <div>
             <SignUp signUp={signUp} handleSignUpChange={handleSignUpChange} />
             <CustomButton
-                className="btn btn-outline-success mt-4 col-md-12"
+                className="btn btn-outline-primary mt-4 col-md-12"
                 btnText="Sign Up"
                 handleSubmit={handleSubmit}
             />

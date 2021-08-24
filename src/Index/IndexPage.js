@@ -41,21 +41,30 @@ export default function IndexPage() {
                         </Link>
                     </div>
 
-                    <div className="col-md-5">
+                    <div className="col-md-3">
                         {/* <Link to='/profile'>
                             <h5 className="hover mr-5 " style={{
                                 fontWeight: "bolder",
                                 display: "inline-block"
                             }}>
-                                <IoPersonCircleOutline size="2em" color="#0275d8" />@ysquareimperial</h5>
+                                <IoPersonCircleOutline size="2em" color="#0275d8" /></h5>
                         </Link> */}
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-4">
+                        <Link to='/profile'>
+                            <h5 className="hover mr-5 " style={{
+                                fontWeight: "bolder",
+                                display: "inline-block"
+                                
+
+                            }}>
+                                <IoPersonCircleOutline size="2em" color="#0275d8" /> ysquareimperial</h5>
+                        </Link>
                         <Link to='/notifications'>
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
-                                marginLeft: 80
+                                marginLeft:60
 
                             }}>
                                 <IoNotificationsCircleOutline size="2em" color="#0275d8" /></h5>
@@ -64,12 +73,12 @@ export default function IndexPage() {
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
-                                marginLeft: ""
+                                marginLeft: 5
                             }}>
                                 <IoSettingsOutline size="1.7em" color="#0275d8" /></h5>
                         </Link>
                         <h5 className="hover" style={{
-                            marginTop:5,
+                            marginTop: 5,
                             float: 'right'
                         }}>
                             <GoSignOut size="1.7em" color="#0275d8" /></h5>

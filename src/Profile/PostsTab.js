@@ -6,8 +6,8 @@ export default function PostsTab() {
         <div>
             <div className="row pt-3">
                 <div className="col-md-12">
-                    <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
-                        <div className="row">
+                    {/* <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}> */}
+                        {/* <div className="row">
                             <div className="col-md-10">
                                 <h6 className="hover mr-1 " style={{
                                     fontWeight: "bolder",
@@ -29,9 +29,9 @@ export default function PostsTab() {
                                     what ever a user write, appears here.what ever a user write, appears here.
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
                         {/* <img src={image} alt="post" style={{ height: 600 }} /> */}
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col mt-2 text-white">
                                 <IoHeartOutline color="#0275d8" size="1.5em" /> 51
                             </div>
@@ -47,8 +47,8 @@ export default function PostsTab() {
                             <div className="col mt-2 text-white">
                                 <BsDownload color="#0275d8" size="1.5em" />
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                 </div>
             </div>
         </div>

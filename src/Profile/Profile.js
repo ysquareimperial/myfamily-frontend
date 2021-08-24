@@ -16,10 +16,7 @@ export default function Profile(profile, handleProfileChange) {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    const [activeTab, setActiveTab] = useState('0');
-    const toggle2 = tab => {
-        if (activeTab !== tab) setActiveTab(tab);
-    }
+    
     return (
         <div>
             <div className="row">
@@ -103,9 +100,9 @@ export default function Profile(profile, handleProfileChange) {
                     <ProfileTab />
                 </div>
             </div>
-            <Modal isOpen={modal} toggle={toggle} >
-                <ModalBody>
-                    <p className="text-primary" style={{ fontWeight: "bold", fontSize: 20 }}>Edit Profile</p>
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalBody style={{ backgroundColor: "#04162C", color: 'white' }}>
+                    <p className="text-white" style={{ fontWeight: "bold", fontSize: 20}}>Edit Profile</p>
                     <div className="row">
                         <div className="col-md-6 form-group">
                             <CustomInput
@@ -196,20 +193,11 @@ export default function Profile(profile, handleProfileChange) {
                                 handleChange={handleProfileChange}
                             />
                         </div>
-                        <div className="col-md-6 form-group" >
-                            <CustomInput className="form-control"
-                                label="Family Name"
-                                name="familyName"
-                                type="text"
-                                value={profile.familyName}
-                                handleChange={handleProfileChange}
-                            />
-                        </div>
                     </div>
                 </ModalBody>
-                <ModalFooter>
-                    <Button style={{ borderRadius: 20 }} color="outline-secondary" onClick={toggle}>Cancel</Button>
-                    <Button style={{ borderRadius: 20 }} color="outline-success" onClick={toggle}>Save</Button>
+                <ModalFooter style={{ backgroundColor: "#04162C", borderColor:'#0b2e5c' }}>
+                    <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Cancel</Button>
+                    <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Save</Button>
                 </ModalFooter>
             </Modal>
 

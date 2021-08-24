@@ -39,7 +39,7 @@ export default function SignInRep() {
             <div className="row">
 
                 <div className="col-md-2"></div>
-                <div className="jumbotron col-md-8 pt-2" style={{ textAlign: 'center' }}>
+                <div className="jumbotron col-md-8 pt-2" style={{ textAlign: 'center', backgroundColor:"#04162C" }}>
                     <div>
                         <SignIn signIn={signIn} handleSignInChange={handleSignInChange} />
                         <CustomButton
@@ -50,7 +50,7 @@ export default function SignInRep() {
                     </div>
                     <p className="text-primary" style={{ cursor: "pointer" }}>Forgotten password?</p>
                     <hr></hr>
-                    <p style={{ fontSize: 12 }}>If you dont have an account, click the button below.</p>
+                    <p style={{ fontSize: 12, color:'white' }}>If you dont have an account, click the button below.</p>
                     <button style={{ borderRadius: 20 }} className="btn btn-outline-success col-md-12" onClick={toggle}>Sign Up</button>
                 </div>
                 <div className="col-md-2"></div>
@@ -59,7 +59,7 @@ export default function SignInRep() {
                 <span className="text-white lead text-center minor" style={{ fontSize: 24 }}>myfamily platform helps you get connected to all your family members and friends around the globe</span>
             </div> */}
             <Modal isOpen={modal} toggle={toggle} >
-                <ModalBody>
+                <ModalBody style={{ backgroundColor: "#04162C", borderColor: "#04162C", color:'white' }}>
                     <p className="text-primary" style={{ fontWeight: "bold", fontSize: 20 }}>Sign Up and Get Connected to your Family</p>
                     <SignUpRep />
                 </ModalBody>

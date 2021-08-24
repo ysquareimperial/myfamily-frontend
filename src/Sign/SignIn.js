@@ -9,8 +9,7 @@ export default function SignIn({ signIn, handleSignInChange, handleSubmit }) {
         
     }
     return (
-        <div>
-            <p id="display"></p>
+        <div style={{}}>
             <CustomInput
                 name="userName"
                 type="text"

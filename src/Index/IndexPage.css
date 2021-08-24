@@ -30,7 +30,10 @@
 
 .hover:hover {
     cursor: pointer;
-    border-bottom: 1px white solid;
+    background-color: #04162C;
+    border-radius: 20;
+    padding: 10;
+    /* border-bottom: 1px white solid; */
 }
 
 .famName:hover {
