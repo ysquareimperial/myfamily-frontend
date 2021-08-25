@@ -140,13 +140,13 @@ export default function (props) {
                 
             </div>
             <div className="col mt-2 text-white text-center">
-                <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" onClick={handleCommentChange} /> <span className="postEngagements" onClick={toggle1}  >{comment}</span>
+                <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" onClick={handleCommentChange} /> <span className="postEngagements" onClick={toggle3}  >{comment}</span>
             </div>
             <div className="col mt-2 text-white text-center">
-                <IoShareSocialOutline color="#0275d8" size="1.5em" onClick={handleShareChange} /> <span className="postEngagements" onClick={toggle1} >{share}</span>
+                <IoShareSocialOutline color="#0275d8" size="1.5em" onClick={handleShareChange} /> <span className="postEngagements" onClick={toggle4} >{share}</span>
             </div>
             <div className="col mt-2 text-white text-center">
-                <BsDownload color="#0275d8" size="1.5em" onClick={handleDownloadChange} /> <span className="postEngagements" onClick={toggle1} >{download}</span>
+                <BsDownload color="#0275d8" size="1.5em" onClick={handleDownloadChange} /> <span className="postEngagements" onClick={toggle5} >{download}</span>
             </div>
         </>
     )
