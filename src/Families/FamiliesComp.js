@@ -64,6 +64,7 @@ export default function FamiliesComp() {
                                     />
                                 </div>
                                 <div className="col-md-12 form-group">
+                                    <label>About Family</label>
                                     <textarea
                                         style={{
                                             backgroundColor: "#04162C",
@@ -73,17 +74,17 @@ export default function FamiliesComp() {
                                             alignContent: "center",
                                             borderColor: '#0b2e5c'
                                         }}
-                                        label="About Family"
+
                                         name="familyAbout"
                                         value={createFamily.famlyAbout}
                                         onChange={handleCreateFamilyChange}
                                     />
                                 </div>
                                 <div className="col-md-12 pt-2">
-                                    <CustomButton
+                                    {/* <CustomButton
                                         className="btn btn-outline-primary"
                                         btnText="Add Family Members"
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                         </ModalBody>
