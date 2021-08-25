@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import SignUp from './SignUp'
 import CustomButton from '../CustomFiles/CustomButton'
+import { useHistory } from 'react-router'
 export default function SignUpRep() {
+    const history = useHistory();
+
     const [signUp, setSignUp] = useState({
         firstName: '',
         lastName: '',
@@ -40,7 +43,7 @@ export default function SignUpRep() {
             <CustomButton
                 className="btn btn-outline-primary mt-4 col-md-12"
                 btnText="Sign Up"
-                handleSubmit={handleSubmit}
+                handleSubmit={()=>history.push("home")}
             />
         </div>
     )
