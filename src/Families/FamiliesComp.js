@@ -36,7 +36,7 @@ export default function FamiliesComp() {
     const toggle = () => setModal(!modal);
     return (
         <div>
-            <div className="row homeBorder">
+            <div className="row homeBorder fixed-top" >
                 <div className="col-md-1"></div>
                 <div className="col-md-7">
                     <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Families</p>

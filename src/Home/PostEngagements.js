@@ -3,13 +3,19 @@ import profileimg from '../Images/yasir.jpeg'
 import { BsDownload } from "react-icons/bs";
 import './PostEngagements.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { IoPersonCircleOutline, IoEllipsisVerticalOutline, IoHeartOutline, IoHeartDislikeOutline, IoChatboxEllipsesOutline, IoShareSocialOutline } from 'react-icons/io5'
+import { IoPersonCircleOutline, IoEllipsisVerticalOutline, IoHeartOutline, IoHeartDislikeOutline, IoChatboxEllipsesOutline, IoShareSocialOutline, IoHeart } from 'react-icons/io5'
 export default function (props) {
     const {
         buttonLabel,
         className
     } = props;
-
+   const [like,setlike] = useState({
+       count: 2,
+       action: false
+   })
+   const [comment,setcomment] = useState(3)
+   const [share,setshare] = useState(1)
+   const [download,setdownload] = useState(6)
     const [modal1, setModal1] = useState(false);
     const [modal3, setModal3] = useState(false);
     const [modal4, setModal4] = useState(false);
@@ -20,6 +26,10 @@ export default function (props) {
     const toggle3 = () => setModal3(!modal3);
     const toggle4 = () => setModal4(!modal4);
     const toggle5 = () => setModal5(!modal5);
+    const handleCommentChange = () =>{setcomment(prev=>prev+1)}
+    const handleLikeChange = () =>{setlike(prev=>({...prev,count:prev.count+1,action:true}))}
+    const handleShareChange = () =>{setshare(prev=>prev+1)}
+    const handleDownloadChange = () =>{setdownload(prev=>prev+1)}
     return (
         <>
             <div>
@@ -126,16 +136,17 @@ export default function (props) {
                 </Modal>
             </div>
             <div className="col mt-2 text-white text-center">
-                <IoHeartOutline color="#0275d8" size="1.5em" /> <span className="postEngagements" onClick={toggle1}>51</span>
+                {like.action?<IoHeart color="#0275d8" size="1.5em" onClick={handleLikeChange} />:<IoHeartOutline color="#0275d8" size="1.5em" onClick={handleLikeChange} />} <span className="postEngagements" onClick={toggle1} >{like.count}</span>
+                
             </div>
             <div className="col mt-2 text-white text-center">
-                <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" /> <span className="postEngagements" onClick={toggle3}>51</span>
+                <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" onClick={handleCommentChange} /> <span className="postEngagements" onClick={toggle1}  >{comment}</span>
             </div>
             <div className="col mt-2 text-white text-center">
-                <IoShareSocialOutline color="#0275d8" size="1.5em" /> <span className="postEngagements" onClick={toggle4}>232</span>
+                <IoShareSocialOutline color="#0275d8" size="1.5em" onClick={handleShareChange} /> <span className="postEngagements" onClick={toggle1} >{share}</span>
             </div>
             <div className="col mt-2 text-white text-center">
-                <BsDownload color="#0275d8" size="1.5em" /> <span className="postEngagements" onClick={toggle5}>51</span>
+                <BsDownload color="#0275d8" size="1.5em" onClick={handleDownloadChange} /> <span className="postEngagements" onClick={toggle1} >{download}</span>
             </div>
         </>
     )
