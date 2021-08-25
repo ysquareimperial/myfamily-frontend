@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 import CustomInput from '../CustomFiles/CustomInput';
 import CustomTextField from '../CustomFiles/CustomTextField';
 import CustomButton from '../CustomFiles/CustomButton'
@@ -6,6 +7,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import image from '../Images/yasir.jpeg'
 
 export default function FamiliesComp() {
+    const history = useHistory();
     const [createFamily, setCreateFamily] = useState({
         familyName: '',
         familyImage: '',
@@ -118,7 +120,7 @@ export default function FamiliesComp() {
                                 <img src={image} />
                             </div>
                             <div className="card-footer text-center">
-                                <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }}>View</button>
+                                <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }} onClick={() => history.push('viewFamily')}>View</button>
                             </div>
                         </div>
                     </div>

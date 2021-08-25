@@ -9,8 +9,8 @@ import Test from './Test'
 function App() {
   return (
     <div>
-      {/* <HomePage/> */}
-      <IndexPage/>
+      <HomePage/>
+      {/* <IndexPage/> */}
     </div>
   );
 }

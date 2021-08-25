@@ -92,6 +92,7 @@ export default function IndexPage() {
                             <Route path="/" exact component={HomeComp} />
                             <Route path="/home" exact component={HomeComp} />
                             <Route path="/families" component={FamiliesComp} />
+                            <Route path="/viewFamily" component={ViewFamily}/> 
                             <Route path="/chat" component={ChatComp} />
                             <Route path="/voiceCall" component={VoiceCallComp} />
                             <Route path="/videoCall" component={VideoCallComp} />
