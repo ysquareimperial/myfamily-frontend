@@ -8,7 +8,7 @@ import { IoWalkSharp, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbub
 export default function IndexLeftMenu() {
     let date = new Date().getFullYear()
     return (
-        <div className="col-md-3 col-sm-12 col1">
+        <div className="col1" style={{position:"fixed", width:"100%", height:"100%"}}>
             <Link to='/home'>
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
