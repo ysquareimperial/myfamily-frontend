@@ -14,7 +14,7 @@ export default function VideoCallComp() {
                         </div>
                         <div className="col-md-1"></div>
                     </div>
-                    <div className="row">
+                    <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
                             <div className="card" style={{ backgroundColor: "#04162C" }}>
@@ -43,31 +43,7 @@ export default function VideoCallComp() {
                                 </div>
                             </div>
                         </div>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        ghjk
+                        
                         <div className="col-md-1"></div>
                     </div>
                 </div>

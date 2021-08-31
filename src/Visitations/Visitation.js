@@ -40,40 +40,7 @@ export default function Visitation() {
                                     <div className="col-md-1"></div>
                                 </div>
                             </div>
-                            <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
-                                <div className="row">
-                                    <div className="col-md-11">
-                                        <h5>Visit</h5><p className='text-secondary'>@ysquareimperial</p>
-                                        <p className="text-white">by 4:00 PM <IoTimeOutline /></p>
-                                        <p style={{ color: "white" }}> at Minna Events Center, Nasarawa, Kano <GoLocation /></p>
-                                    </div>
-                                    <div className="col-md-1"></div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-11">
-                                        <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginRight: 5 }}>Edit</button>
-                                        <button className="btn btn-outline-primary" style={{ borderRadius: 20 }}>Delete</button>
-                                    </div>
-                                    <div className="col-md-1"></div>
-                                </div>
-                            </div>
-                            <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
-                                <div className="row">
-                                    <div className="col-md-11">
-                                        <h5>Visit</h5><p className='text-secondary'>@ysquareimperial</p>
-                                        <p className="text-white">by 4:00 PM <IoTimeOutline /></p>
-                                        <p style={{ color: "white" }}> at Minna Events Center, Nasarawa, Kano <GoLocation /></p>
-                                    </div>
-                                    <div className="col-md-1"></div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-11">
-                                        <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginRight: 5 }}>Edit</button>
-                                        <button className="btn btn-outline-primary" style={{ borderRadius: 20 }}>Delete</button>
-                                    </div>
-                                    <div className="col-md-1"></div>
-                                </div>
-                            </div>
+                           
                         </div>
                         <div className="col-md-1"></div>
                     </div>

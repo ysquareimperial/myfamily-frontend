@@ -8,7 +8,7 @@ import { IoWalkSharp, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbub
 export default function IndexLeftMenu() {
     let date = new Date().getFullYear()
     return (
-        <div className="col-md-3 col-sm-12 col1">
+        <div className="col1" style={{position:"fixed", width:"100%", height:"100%"}}>
             <Link to='/home'>
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
@@ -53,8 +53,8 @@ export default function IndexLeftMenu() {
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoNotificationsCircleOutline size="1.5em" color="#0275d8" /> Notifications</h4>
             </Link> */}
-            <hr style={{ backgroundColor: "" }} className="bg-primary"></hr>
-            <p className="text-center" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
+            {/* <hr style={{ width:50, float:'left' }} className="bg-primary"></hr> */}
+            <p className="ml-3 pt-5" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
         </div>
     )
 }

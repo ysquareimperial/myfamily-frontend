@@ -26,7 +26,7 @@ export default function IndexPage() {
     return (
         <div className="row0">
             <Router>
-                <div className="row row1 p-3">
+                <div className="row row1 p-3 fixed-top">
                     <div className="col-md-1">
                         <Link to="/">
                             <img className="indxeimg" src={image} alt="mfLogo" />
@@ -85,8 +85,10 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="row pl-2">
-                    <IndexLeftMenu />
+                <div className="row" style={{marginTop:"93px"}}>
+                    <div className="col-md-3">
+                        <IndexLeftMenu/>
+                    </div>
                     <div className="col-md-6">
                         <Switch>
                             <Route path="/" exact component={HomeComp} />
