@@ -5,9 +5,10 @@
 .row1 {
     background-color: #010c1a;
     /* position: -webkit-sticky;
-    position: sticky; */
-    top: 0;
+    position: sticky;
+    top: 0; */
 }
+
 
 .col1, .col3 {
     background-color: #04162C;

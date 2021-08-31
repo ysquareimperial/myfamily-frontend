@@ -35,6 +35,20 @@ export default function SignUpRep() {
             signUp
         }
         console.log(obj)
+    
+        fetch('http://localhost:2021/signup', {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+                ...signUp
+            })
+        }).then(function (response) {
+            return response.json()
+        }).then((data) => {
+            console.log(data)
+        }).catch((err) => { console.log(err) })
     }
 
     return (
@@ -43,7 +57,7 @@ export default function SignUpRep() {
             <CustomButton
                 className="btn btn-outline-primary mt-4 col-md-12"
                 btnText="Sign Up"
-                handleSubmit={()=>history.push("home")}
+                handleSubmit={handleSubmit}
             />
         </div>
     )

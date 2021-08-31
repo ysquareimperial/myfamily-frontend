@@ -107,51 +107,12 @@ export default function FamiliesComp() {
                                 <img src={image} />
                             </div>
                             <div className="card-footer text-center">
-                                <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }}>View</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-5">
-                        <div className="card" style={{ backgroundColor: "#04162C" }}>
-                            <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
-                                Family Name will be here
-                            </div>
-                            <div className="card-body">
-                                <img src={image} />
-                            </div>
-                            <div className="card-footer text-center">
                                 <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }} onClick={() => history.push('viewFamily')}>View</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-1"></div>
                 </div>
-
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                ghjk
                 <div className="col-md-1"></div>
             </div>
         </div>
