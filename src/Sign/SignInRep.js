@@ -58,9 +58,9 @@ export default function SignInRep() {
             {/* <div className="glow">
                 <span className="text-white lead text-center minor" style={{ fontSize: 24 }}>myfamily platform helps you get connected to all your family members and friends around the globe</span>
             </div> */}
-            <Modal isOpen={modal} toggle={toggle} >
+            <Modal isOpen={modal} toggle={toggle} size="lg" >
                 <ModalBody style={{ backgroundColor: "#04162C", borderColor: "#04162C", color:'white' }}>
-                    <p className="text-primary" style={{ fontWeight: "bold", fontSize: 20 }}>Sign Up and Get Connected to your Family</p>
+                    <p className="text-primary text-center" style={{ fontWeight: "bold", fontSize: 20 }}>Sign Up and Get Connected to your Family</p>
                     <SignUpRep />
                 </ModalBody>
             </Modal>

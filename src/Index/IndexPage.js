@@ -85,11 +85,11 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="row" style={{marginTop:"93px"}}>
+                <div className="row" style={{marginTop:"90px"}}>
                     <div className="col-md-3">
                         <IndexLeftMenu/>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-7">
                         <Switch>
                             <Route path="/" exact component={HomeComp} />
                             <Route path="/home" exact component={HomeComp} />
@@ -107,7 +107,7 @@ export default function IndexPage() {
                             <Route path="/settings & privacy" component={SettingsPrivacy} />
                         </Switch>
                     </div>
-                    <div className="col-md-3 col3">
+                    <div className="col-md-2 col3">
                         <IndexRightMenu />
                     </div>
                 </div>

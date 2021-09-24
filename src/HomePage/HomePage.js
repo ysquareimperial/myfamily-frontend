@@ -3,6 +3,7 @@ import './HomePage.css'
 // import image from '../HomePage/images/10.jpg'
 import SignInRep from '../Sign/SignInRep'
 import Images from './Images'
+import Quotes from './Quotes'
 
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
     const [modal, setModal] = useState(false);
     const bgImage = Math.floor(Math.random() * Images.length)
     //  console.log(Images[bgImage])
+    const quote = Math.floor(Math.random() * Quotes.length)
 
     const toggle = () => setModal(!modal);
 
@@ -42,15 +44,17 @@ export default function HomePage() {
                 }}>
                     <img src={Images[bgImage]} alt="myfamily" />
                     <div style={{
-                        position: "absolute", top: 500, left: 130,
-                        background: "rgba(128, 128, 128, 0.6)"
+                        position: "absolute", top: 550,
+                        background: "rgba(128, 128, 128, 0.6)",
+                        width:"100%"
                     }} className="border rounded">
-                        <div>
+                        <div style={{}}>
                             <h1 className="lead text-white" style={{ fontSize: 50 }}>myfamily</h1>
                             <h1 className="lead text-white p-3">
-                                “Family and friends are hidden treasures,
+                                {/* “Family and friends are hidden treasures,
                                 seek them and enjoy their riches.”
-                                <p className="text-white">–Wanda Hope Carter</p>
+                                <p className="text-white">–Wanda Hope Carter</p> */}
+                                {Quotes[quote]}
                             </h1>
                         </div>
                     </div>
