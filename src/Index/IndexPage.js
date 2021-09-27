@@ -21,12 +21,13 @@ import ViewFamily from '../Families/ViewFamily'
 import Visitation from '../Visitations/Visitation'
 import SettingsPrivacy from '../Settings/SettingsPrivacy'
 import IndexRightMenu from './IndexRightMenu'
+import './Mobile.css'
 export default function IndexPage() {
     let date = new Date().getFullYear()
     return (
         <div className="row0">
             <Router>
-                <div className="row row1 p-3 fixed-top">
+                <div className="row row1 p-3 fixed-top mobileNavbar">
                     <div className="col-md-1">
                         <Link to="/">
                             <img className="indxeimg" src={image} alt="mfLogo" />
@@ -41,7 +42,7 @@ export default function IndexPage() {
                         </Link>
                     </div>
 
-                    <div className="col-md-3">
+                    <div className="col-md-2">
                         {/* <Link to='/profile'>
                             <h5 className="hover mr-5 " style={{
                                 fontWeight: "bolder",
@@ -50,7 +51,7 @@ export default function IndexPage() {
                                 <IoPersonCircleOutline size="2em" color="#0275d8" /></h5>
                         </Link> */}
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-5">
                         <Link to='/profile'>
                             <h5 className="hover mr-5 " style={{
                                 fontWeight: "bolder",
@@ -85,8 +86,8 @@ export default function IndexPage() {
                     </div>
                 </div>
 
-                <div className="row" style={{marginTop:"93px"}}>
-                    <div className="col-md-3">
+                <div className="row" style={{marginTop:"80px"}}>
+                    <div className="col-md-3 mobileSidebar">
                         <IndexLeftMenu/>
                     </div>
                     <div className="col-md-6">
@@ -107,7 +108,7 @@ export default function IndexPage() {
                             <Route path="/settings & privacy" component={SettingsPrivacy} />
                         </Switch>
                     </div>
-                    <div className="col-md-3 col3">
+                    <div className="col-md-3 col3 mobileSidebar">
                         <IndexRightMenu />
                     </div>
                 </div>

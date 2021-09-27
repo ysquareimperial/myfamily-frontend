@@ -7,6 +7,7 @@ import image from '../Images/yasir.jpeg'
 import PostEngagements from './PostEngagements';
 import './HomeComp.css'
 import Post from './Post'
+import './MobileHome.css'
 export default function HomeComp(props) {
 
     const {
@@ -48,10 +49,10 @@ export default function HomeComp(props) {
                             <div className="">
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Home</p>
+                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }} className="homeText">Home</p>
                                     </div>
                                     <div className="col-md-6">
-                                        <button className="btn btn-outline-primary mb-2 mt-2" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
+                                        <button className="btn btn-outline-primary mb-2 mt-2 postButton" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
                                     </div>
                                 </div>
                             </div>

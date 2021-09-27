@@ -3,4 +3,7 @@
     .mobileNavbar{
         visibility: hidden;
     }
+    .mobileSidebar{
+        visibility: hidden;
+    }
   }
