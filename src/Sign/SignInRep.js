@@ -16,10 +16,10 @@ export default function SignInRep() {
     const history = useHistory()
 
     const toggle = () => setModal(!modal);
-    const query = useQuery()
-    const next = query.get("next")
+    // const query = useQuery()
+    // const next = query.get("next")
     const [loadSpinner, setLoadSpinner] = useState(false);
-    const [setName] = useContext(UserContext);
+    // const [setName] = useContext(UserContext);
     const { addToast } = useToasts();
 
     const [signIn, setSignIn] = useState({
@@ -69,18 +69,18 @@ export default function SignInRep() {
                 if (result.success) {
                     console.log(result)
                     localStorage.setItem("key", JSON.stringify(result.token));
-                    setName(result.user)
+                    // setName(result.user)
                     addToast(result.msg, {
                         appearance: "success",
                         autoDismiss: true,
                     });
-                    if(next) {
-                        history.push(next)
-                    }
-                    else {
-                        history.push("/home")
-                        setLoadSpinner(false);
-                    }
+                    // if(next) {
+                    //     history.push(next)
+                    // }
+                    // else {
+                    //     history.push("/home")
+                    //     setLoadSpinner(false);
+                    // }
                 }
 
                 else {
@@ -111,7 +111,7 @@ export default function SignInRep() {
                         <CustomButton
                             className="btn btn-outline-primary mt-4 col-md-12"
                             btnText="Sign In"
-                            handleSubmit={handleSubmit}
+                            handleSubmit={handleApi}
                         />
                     </div>
                     <p className="text-primary" style={{ cursor: "pointer" }}>Forgotten password?</p>
