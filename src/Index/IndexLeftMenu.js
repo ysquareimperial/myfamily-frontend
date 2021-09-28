@@ -2,59 +2,60 @@ import React from 'react'
 import { FaHandHoldingUsd } from 'react-icons/fa'
 import { RiCalendarEventLine, RiNotification2Line } from 'react-icons/ri'
 import { GiFamilyHouse } from 'react-icons/gi'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {ImTree} from 'react-icons/im'
 import { IoWalkSharp, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
+import './IndexPage.css'
 export default function IndexLeftMenu() {
     let date = new Date().getFullYear()
     return (
         <div className="col1" style={{position:"fixed", width:"100%", height:"100%"}}>
-            <Link to='/home'>
+            <NavLink to='/home' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
-            </Link>
-            <Link to='/families'>
+            </NavLink>
+            <NavLink to='/families' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoPeopleOutline size="1.3em" color="#0275d8" /> Families</h4>
-            </Link>
-            <Link to='/chat'>
+            </NavLink>
+            <NavLink to='/chat' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoChatbubblesOutline size="1.5em" color="#0275d8" /> Chat</h4>
-            </Link>
-            <Link to='/voiceCall'>
+            </NavLink>
+            <NavLink to='/voiceCall' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoCallOutline size="1.5em" color="#0275d8" /> Voice Call</h4>
-            </Link>
-            <Link to='/videoCall'>
+            </NavLink>
+            <NavLink to='/videoCall' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoVideocamOutline size="1.5em" color="#0275d8" /> Video Call</h4>
-            </Link>
-            <Link to='/visitation'>
+            </NavLink>
+            <NavLink to='/visitation' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoWalkSharp size="1.5em" color="#0275d8" /> Visitations</h4>
-            </Link>
-            <Link to='/supportFamily'>
+            </NavLink>
+            <NavLink to='/supportFamily' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <FaHandHoldingUsd size="1.3em" color="#0275d8" /> Support Family</h4>
-            </Link>
-            <Link to='/familyTree'>
+            </NavLink>
+            <NavLink to='/familyTree' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <ImTree size="1.3em" color="#0275d8" /> Family Tree</h4>
-            </Link>
-            <Link to='/events'>
+            </NavLink>
+            <NavLink to='/events' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <RiCalendarEventLine size="1.3em" color="#0275d8" /> Events</h4>
-            </Link>
-            <Link to='/memories'>
+            </NavLink>
+            <NavLink to='/memories' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoTimerOutline size="1.3em" color="#0275d8" /> Memories</h4>
-            </Link>
-            {/* <Link to='/notifications'>
+            </NavLink>
+            {/* <NavLink to='/notifications' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoNotificationsCircleOutline size="1.5em" color="#0275d8" /> Notifications</h4>
-            </Link> */}
-            {/* <hr style={{ width:50, float:'left' }} className="bg-primary"></hr> */}
-            <p className="ml-3 pt-5" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
+            </NavLink> */}
+            <hr style={{ backgroundColor: "" }} className="bg-primary"></hr>
+            <p className="text-center" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
         </div>
     )
 }
