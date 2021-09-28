@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {useHistory, useLocation} from "react-router-dom"
 import SignIn from './SignIn'
 import CustomButton from '../CustomFiles/CustomButton'
 import SignUpRep from './SignUpRep'
+import { api } from "../api"
 import './Glow.css'
+import useQuery from "../hooks/useQuery"
+import { UserContext } from "../contextApi/user_context";
+import { useToasts } from 'react-toast-notifications';
+
+
 export default function SignInRep() {
     const [modal, setModal] = useState(false);
+    const history = useHistory()
 
     const toggle = () => setModal(!modal);
+    const query = useQuery()
+    const next = query.get("next")
+    const [loadSpinner, setLoadSpinner] = useState(false);
+    const [setName] = useContext(UserContext);
+    const { addToast } = useToasts();
+
     const [signIn, setSignIn] = useState({
-        userName: '',
+        enail: '',
         password: ''
     })
     const reset = () => {
         setSignIn({
-            userName: '',
+            email: '',
             password: ''
         }
         )
@@ -29,6 +43,58 @@ export default function SignInRep() {
             signIn
         }
         console.log(obj)
+    }
+
+    const handleApi = () => {
+        const { email, password } = signIn
+        if (email === "" || password === "") {
+            alert("Please complete the form", {
+                appearance: "warning",
+                autoDismiss: true
+            });
+        }
+
+        else {
+            setLoadSpinner(true)
+            fetch(`${api}/signin`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    ...signIn
+                }),
+            }).then((response) => response.json())
+            .then((result) => {
+                if (result.success) {
+                    console.log(result)
+                    localStorage.setItem("key", JSON.stringify(result.token));
+                    setName(result.user)
+                    addToast(result.msg, {
+                        appearance: "success",
+                        autoDismiss: true,
+                    });
+                    if(next) {
+                        history.push(next)
+                    }
+                    else {
+                        history.push("/home")
+                        setLoadSpinner(false);
+                    }
+                }
+
+                else {
+                    addToast(result.msg, {
+                        appearance: "warning",
+                        autoDismiss: true,
+                    });
+                    setLoadSpinner(false);
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        }
     }
 
 
