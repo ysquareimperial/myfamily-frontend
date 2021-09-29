@@ -22,11 +22,12 @@ import Visitation from '../Visitations/Visitation'
 import SettingsPrivacy from '../Settings/SettingsPrivacy'
 import IndexRightMenu from './IndexRightMenu'
 import './Mobile.css'
+import ChatMember from '../Chat/ChatMember'
 export default function IndexPage() {
     let date = new Date().getFullYear()
     return (
         <div className="row0">
-            <Router>
+            
                 <div className="row row1 p-3 fixed-top mobileNavbar">
                     <div className="col-md-1">
                         <Link to="/">
@@ -52,7 +53,7 @@ export default function IndexPage() {
                         </Link> */}
                     </div>
                     <div className="col-md-5">
-                        <Link to='/profile'>
+                        <Link to='/home/profile'>
                             <h5 className="hover mr-5 " style={{
                                 fontWeight: "bolder",
                                 display: "inline-block"
@@ -61,7 +62,7 @@ export default function IndexPage() {
                             }}>
                                 <IoPersonCircleOutline size="2em" color="#0275d8" /> ysquareimperial</h5>
                         </Link>
-                        <Link to='/notifications'>
+                        <Link to='/home/notifications'>
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
@@ -70,7 +71,7 @@ export default function IndexPage() {
                             }}>
                                 <IoNotificationsCircleOutline size="2em" color="#0275d8" /></h5>
                         </Link>
-                        <Link to='/settings & privacy'>
+                        <Link to='/home/settings & privacy'>
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
@@ -92,27 +93,28 @@ export default function IndexPage() {
                     </div>
                     <div className="col-md-7">
                         <Switch>
-                            <Route path="/" exact component={HomeComp} />
+                            {/* <Route path="/" exact component={HomeComp} /> */}
                             <Route path="/home" exact component={HomeComp} />
-                            <Route path="/families" component={FamiliesComp} />
-                            <Route path="/viewFamily" component={ViewFamily}/> 
-                            <Route path="/chat" component={ChatComp} />
-                            <Route path="/voiceCall" component={VoiceCallComp} />
-                            <Route path="/videoCall" component={VideoCallComp} />
-                            <Route path="/visitation" component={Visitation} />
-                            <Route path="/events" component={EventsComp} />
-                            <Route path="/supportFamily" component={SupportFamComp} />
-                            <Route path="/memories" component={MemoriesComp} />
-                            <Route path="/notifications" component={NotificationsComp} />
-                            <Route path="/profile" component={Profile} />
-                            <Route path="/settings & privacy" component={SettingsPrivacy} />
+                            <Route path="/home/families" component={FamiliesComp} />
+                            <Route path="/home/viewFamily" component={ViewFamily}/> 
+                            <Route path="/home/chat" exact component={ChatComp} />
+                            <Route path="/home/chat-member" exact component={ChatMember} />
+                            <Route path="/home/voiceCall" component={VoiceCallComp} />
+                            <Route path="/home/videoCall" component={VideoCallComp} />
+                            <Route path="/home/visitation" component={Visitation} />
+                            <Route path="/home/events" component={EventsComp} />
+                            <Route path="/home/supportFamily" component={SupportFamComp} />
+                            <Route path="/home/memories" component={MemoriesComp} />
+                            <Route path="/home/notifications" component={NotificationsComp} />
+                            <Route path="/home/profile" component={Profile} />
+                            <Route path="/home/settings & privacy" component={SettingsPrivacy} />
                         </Switch>
                     </div>
                     <div className="col-md-2 col3">
                         <IndexRightMenu />
                     </div>
                 </div>
-            </Router>
+        
         </div >
     )
 }

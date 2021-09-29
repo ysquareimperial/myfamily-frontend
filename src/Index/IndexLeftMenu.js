@@ -14,39 +14,39 @@ export default function IndexLeftMenu() {
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
             </NavLink>
-            <NavLink to='/families' activeClassName="active">
+            <NavLink to='/home/families' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoPeopleOutline size="1.3em" color="#0275d8" /> Families</h4>
             </NavLink>
-            <NavLink to='/chat' activeClassName="active">
+            <NavLink to='/home/chat' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoChatbubblesOutline size="1.5em" color="#0275d8" /> Chat</h4>
             </NavLink>
-            <NavLink to='/voiceCall' activeClassName="active">
+            <NavLink to='/home/voiceCall' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoCallOutline size="1.5em" color="#0275d8" /> Voice Call</h4>
             </NavLink>
-            <NavLink to='/videoCall' activeClassName="active">
+            <NavLink to='/home/videoCall' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoVideocamOutline size="1.5em" color="#0275d8" /> Video Call</h4>
             </NavLink>
-            <NavLink to='/visitation' activeClassName="active">
+            <NavLink to='/home/visitation' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoWalkSharp size="1.5em" color="#0275d8" /> Visitations</h4>
             </NavLink>
-            <NavLink to='/supportFamily' activeClassName="active">
+            <NavLink to='/home/supportFamily' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <FaHandHoldingUsd size="1.3em" color="#0275d8" /> Support Family</h4>
             </NavLink>
-            <NavLink to='/familyTree' activeClassName="active">
+            <NavLink to='/home/familyTree' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <ImTree size="1.3em" color="#0275d8" /> Family Tree</h4>
             </NavLink>
-            <NavLink to='/events' activeClassName="active">
+            <NavLink to='/home/events' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <RiCalendarEventLine size="1.3em" color="#0275d8" /> Events</h4>
             </NavLink>
-            <NavLink to='/memories' activeClassName="active">
+            <NavLink to='/home/memories' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoTimerOutline size="1.3em" color="#0275d8" /> Memories</h4>
             </NavLink>

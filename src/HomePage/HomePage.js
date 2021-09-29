@@ -44,7 +44,7 @@ export default function HomePage() {
                 }}>
                     <img src={Images[bgImage]} alt="myfamily" />
                     <div style={{
-                        position: "absolute", top: 550,
+                        position: "absolute", top: 450,
                         background: "rgba(128, 128, 128, 0.6)",
                         width:"100%"
                     }} className="border rounded">
