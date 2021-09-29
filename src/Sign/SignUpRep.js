@@ -42,11 +42,64 @@ export default function SignUpRep() {
     }
 
     const handleSubmit = () => {
+        
         reset()
         let obj = {
             signUp
         }
         console.log(obj)
+
+        // const handleApi = () => {
+        //     const { email, password } = signIn
+        //     if (email === "" || password === "") {
+        //         alert("Please complete the form", {
+        //             appearance: "warning",
+        //             autoDismiss: true
+        //         });
+        //     }
+    
+        //     else {
+        //         setLoadSpinner(true)
+        //         fetch(`${api}/signin`, {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-type": "application/json",
+        //             },
+        //             body: JSON.stringify({
+        //                 ...signIn
+        //             }),
+        //         }).then((response) => response.json())
+        //         .then((result) => {
+        //             if (result.success) {
+        //                 console.log(result)
+        //                 localStorage.setItem("key", JSON.stringify(result.token));
+        //                 // setName(result.user)
+        //                 addToast(result.msg, {
+        //                     appearance: "success",
+        //                     autoDismiss: true,
+        //                 });
+        //                 // if(next) {
+        //                 //     history.push(next)
+        //                 // }
+        //                 // else {
+        //                 //     history.push("/home")
+        //                 //     setLoadSpinner(false);
+        //                 // }
+        //             }
+    
+        //             else {
+        //                 addToast(result.msg, {
+        //                     appearance: "warning",
+        //                     autoDismiss: true,
+        //                 });
+        //                 setLoadSpinner(false);
+        //             }
+        //         })
+        //         .catch((err) => {
+        //             console.log(err);
+        //         })
+        //     }
+        // }
     
     //     fetch(`${api}/users`, {
     //         method: "POST",
