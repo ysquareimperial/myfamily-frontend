@@ -23,6 +23,8 @@ import IndexRightMenu from './IndexRightMenu'
 import FamilyTreeComp from '../FamilyTree/FamilyTreeComp'
 import './Mobile.css'
 import ChatMember from '../Chat/ChatMember'
+import Navbars from '../Navbars';
+import { Navbar } from 'reactstrap'
 export default function IndexPage() {
     let date = new Date().getFullYear()
     return (
@@ -78,7 +80,8 @@ export default function IndexPage() {
                         </Link>
                     </div>
                 </div> */}
-
+                
+                <Navbars />
                 <div className="row" style={{marginTop:""}}>
                     <div className="col-md-3">
                         <IndexLeftMenu/>

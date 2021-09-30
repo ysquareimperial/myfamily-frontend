@@ -6,7 +6,6 @@ import { useLocation, useHistory, BrowserRouter as Router, Switch, Route } from 
 import HomePage from './HomePage/HomePage';
 import IndexPage from './Index/IndexPage';
 import { ToastProvider } from "react-toast-notifications";
-import Navbar from './Navbar';
 
 import { api } from "./api"
 import { UserContext } from "./contextApi/user_context";
@@ -20,7 +19,6 @@ function App() {
   return (
     <div className="body">
       <ToastProvider>
-        <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/home"  component={IndexPage}/>

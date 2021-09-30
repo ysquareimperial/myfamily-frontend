@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { GoSignOut } from 'react-icons/go'
 import { IoSettingsOutline, IoNotificationsCircleOutline, IoPersonCircleOutline} from "react-icons/io5"
 
-export default function Navbar() {
+export default function Navbars() {
     return(
     <div className="row row1 p-3 fixed-top mobileNavbar">
                         <div className="col-md-1">
