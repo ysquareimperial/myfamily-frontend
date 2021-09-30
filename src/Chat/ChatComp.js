@@ -4,7 +4,6 @@ import { IoPeopleOutline } from 'react-icons/io5'
 import profileimg from '../Images/yasir.jpeg'
 import MyModal from './Modal';
 
-
 export default function ChatComp() {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -53,31 +52,6 @@ export default function ChatComp() {
                             </div>
                         </div>
                         <MyModal contact="Chat" type="Chat" toggle={toggle} modal={modal}/>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        ghjk
                         <div className="col-md-1"></div>
                     </div>
                 </div>
