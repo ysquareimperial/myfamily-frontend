@@ -64,7 +64,6 @@ export default function HomeComp(props) {
                                         }}>
                                             <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
                                         </h6>
-                                        <h6 style={{ display: "inline", color: "grey" }}>@ysquareimperial, </h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
                                     <div className="col-md-1" style={{ float: 'right' }}>
@@ -92,7 +91,6 @@ export default function HomeComp(props) {
                                         }}>
                                             <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
                                         </h6>
-                                        <h6 style={{ display: "inline", color: "grey" }}>@ysquareimperial, </h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
                                     <div className="col-md-1" style={{}}>

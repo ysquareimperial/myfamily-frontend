@@ -26,7 +26,7 @@ export default function Visitation() {
                             <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-11">
-                                        <h5>Visit</h5><p className='text-secondary'>@ysquareimperial</p>
+                                        <h5>Visit</h5>
                                         <p className="text-white">by 4:00 PM <IoTimeOutline /></p>
                                         <p style={{ color: "white" }}> at Minna Events Center, Nasarawa, Kano <GoLocation /></p>
                                     </div>
@@ -43,7 +43,7 @@ export default function Visitation() {
                             <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-11">
-                                        <h5>Visit</h5><p className='text-secondary'>@ysquareimperial</p>
+                                        <h5>Visit</h5>
                                         <p className="text-white">by 4:00 PM <IoTimeOutline /></p>
                                         <p style={{ color: "white" }}> at Minna Events Center, Nasarawa, Kano <GoLocation /></p>
                                     </div>
@@ -60,7 +60,7 @@ export default function Visitation() {
                             <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-11">
-                                        <h5>Visit</h5><p className='text-secondary'>@ysquareimperial</p>
+                                        <h5>Visit</h5>
                                         <p className="text-white">by 4:00 PM <IoTimeOutline /></p>
                                         <p style={{ color: "white" }}> at Minna Events Center, Nasarawa, Kano <GoLocation /></p>
                                     </div>

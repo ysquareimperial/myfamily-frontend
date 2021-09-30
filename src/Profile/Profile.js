@@ -41,7 +41,6 @@ export default function Profile(profile, handleProfileChange) {
                                         <div className="col-md-8">
                                             <div class="card-body text-right">
                                                 <h5 className="card-title" style={{ lineHeight: 0.3, color: "white" }} >Yasir Ado Hassan</h5>
-                                                <p className="card-text" style={{ color: "white" }}>@ysquareimperial</p>
                                                 <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
                                                 <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
                                                 <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
