@@ -21,17 +21,29 @@ export default function ChatMember() {
                             <p style={{ display: 'inline', color: 'grey' }}> @username</p>
                         </div>
                     </div>
-                    hjhjhjhsd
+
+                    <div className="row">
+                        <div className="col-md-2 "></div>
+                        <div className="col-md-4 bg-secondary mr-1" >
+                            <p style={{ float: 'left', marginLeft: 10, backgroundColor: '#0275d8', color: 'white' }}>cfdfkjdjfdjf</p>
+                        </div>
+                        <div className="col-md-4 bg-secondary">
+                            <p style={{ float: 'right', backgroundColor: '#0275d8', color: 'white' }}>cfdfkjdjfdjf</p>
+                        </div>
+                        <div className="col-md-2"></div>
+                    </div>
+
                     <div className="row" style={{ backgroundColor: "#04162C", borderTopLeftRadius: 10, borderBottomTopRadius: 10 }}>
                         <div className="col-md-1">
-                            <IoMdAdd color='#0275d8' size='2em' style={{cursor:'pointer', borderRadius: 20, marginTop: 15, marginLeft:40 }}/>
+                            <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginTop: 15, marginLeft:15 }}>Add</button>
+                            {/* <IoMdAdd color='#0275d8' size='2em' style={{ cursor: 'pointer', borderRadius: 20, marginTop: 15, marginLeft: 40 }} /> */}
                         </div>
                         <div className="col-md-9">
                             <textarea className="form-control mt-1 mb-1" rows="2" style={{ backgroundColor: '#04162C', color: 'white', borderRadius: 15, marginLeft: 20 }}></textarea>
                         </div>
                         <div className="col-md-2">
-                            <AiOutlineSend color='#0275d8' size='2em' style={{cursor:'pointer', borderRadius: 20, marginTop: 15 }} />
-                            {/* <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginTop: 15 }}>Send</button> */}
+                            {/* <AiOutlineSend color='#0275d8' size='2em' style={{ cursor: 'pointer', borderRadius: 20, marginTop: 15 }} /> */}
+                            <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginTop: 15 }}>Send</button>
                         </div>
                     </div>
                 </div>
