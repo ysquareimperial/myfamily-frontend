@@ -50,31 +50,7 @@ export default function VoiceCallComp() {
                             </div>
                         </div>
                         <MyModal contact="Voice Call" type="Call" toggle={toggle} modal={modal}/>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        ghjk
+
                         <div className="col-md-1"></div>
                     </div>
                 </div>
