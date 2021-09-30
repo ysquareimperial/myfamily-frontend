@@ -2,10 +2,8 @@ import React, { useState, useContext } from 'react'
 import SignUp from './SignUp'
 import CustomButton from '../CustomFiles/CustomButton'
 import { useHistory } from 'react-router'
-import useQuery from "../hooks/useQuery"
-import { UserContext } from "../contextApi/user_context";
-
-import { api } from "../api"
+import { _postApi } from '../redux/actions/api'
+import { api_url } from '../redux/actions'
 
 
 export default function SignUpRep() {
@@ -23,7 +21,8 @@ export default function SignUpRep() {
         email: '',
         phone: '',
         dateOfBirth: '',
-        password: ''
+        password: '',
+        query_type: 'insert'
     })
 
     const reset = () => {
@@ -41,96 +40,26 @@ export default function SignUpRep() {
         setSignUp(prev => ({ ...prev, [name]: value }))
     }
 
-    const handleSubmit = () => {
-        
+    const handle = () => {
+
         reset()
         let obj = {
             signUp
         }
         console.log(obj)
+    }
 
-        // const handleApi = () => {
-        //     const { email, password } = signIn
-        //     if (email === "" || password === "") {
-        //         alert("Please complete the form", {
-        //             appearance: "warning",
-        //             autoDismiss: true
-        //         });
-        //     }
-    
-        //     else {
-        //         setLoadSpinner(true)
-        //         fetch(`${api}/signin`, {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-type": "application/json",
-        //             },
-        //             body: JSON.stringify({
-        //                 ...signIn
-        //             }),
-        //         }).then((response) => response.json())
-        //         .then((result) => {
-        //             if (result.success) {
-        //                 console.log(result)
-        //                 localStorage.setItem("key", JSON.stringify(result.token));
-        //                 // setName(result.user)
-        //                 addToast(result.msg, {
-        //                     appearance: "success",
-        //                     autoDismiss: true,
-        //                 });
-        //                 // if(next) {
-        //                 //     history.push(next)
-        //                 // }
-        //                 // else {
-        //                 //     history.push("/home")
-        //                 //     setLoadSpinner(false);
-        //                 // }
-        //             }
-    
-        //             else {
-        //                 addToast(result.msg, {
-        //                     appearance: "warning",
-        //                     autoDismiss: true,
-        //                 });
-        //                 setLoadSpinner(false);
-        //             }
-        //         })
-        //         .catch((err) => {
-        //             console.log(err);
-        //         })
-        //     }
-        // }
-    
-    //     fetch(`${api}/users`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-type": "application/json",
-    //         },
-    //         body: JSON.stringify({
-    //             ...signUp
-    //         })
-    //     }).then(function (response) {
-    //         return response.json()
-    //     }).then((data) => {
-    //         console.log(data);
-    //         // if (data.success) {
-    //         //     localStorage.setItem("key", JSON.stringify(data.token));
-    //         //     // setName(data.user);
-    // //             if(next){
-    // //         history.push(next)
-
-    // //     }
-    // //     else{
-    // //     history.push("/home")
-    // //     setLoadSpinner(false);
-    // // }
-    // //             // alert("Registered Successfully");
-    // //             // history.push("/dashboard/alumni_home");
-    // //         } else {
-    // //             alert(data.msg);
-    // //             setLoadSpinner(false);
-    // //         }
-    //     // }).catch((err) => { console.log(err) })
+    const handleSubmit = () => {
+        signUp.query_type = 'insert'
+        _postApi(`${api_url}/users`,
+        signUp,
+        (data) => {
+            if (data.success) {
+                alert("Successully Submited")
+                handle()
+            }
+        }
+        )
     }
 
     return (
