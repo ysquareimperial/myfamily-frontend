@@ -59,7 +59,7 @@ export default function IndexPage() {
                                 
 
                             }}>
-                                <IoPersonCircleOutline size="2em" color="#0275d8" /> ysquareimperial</h5>
+                                <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h5>
                         </Link>
                         <Link to='/home/notifications'>
                             <h5 className="hover" style={{
