@@ -100,7 +100,7 @@ export default function ViewFamily() {
                             <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                         </div>
                         <div className="col-md-7 text-white mt-2 ml-1">
-                            <p>Yasir Ado Hassan</p>
+                            <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                         </div>
                         <div className="col-md-2">
                             <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 70 }}>Add</button>
@@ -130,7 +130,7 @@ export default function ViewFamily() {
                                     <img src={image2} alt="family image" style={{ borderColor: '#0275d8', borderRadius: 10, border: 1, borderStyle: 'solid' }} />
                                 </div>
                             </div>
-                            <div className="row mt-3">
+                            <div className="row mt-3 mb-3">
                                 <div className="col-md-8">
                                     <h4>Members</h4>
                                 </div>
@@ -138,15 +138,33 @@ export default function ViewFamily() {
                                     <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: 'right' }} onClick={toggle2}>Add members</button>
                                 </div>
                             </div>
-                            <div className="row mt-2">
+                            <div className="row">
                                 <div className="col-md-1">
                                     <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                                 </div>
                                 <div className="col-md-7 text-white mt-2 ml-1">
-                                    <p>Yasir Ado Hassan</p>
+                                    <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                                 </div>
-                                <div className="col-md-2">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 95 }}>Chat</button>
+                                <div className="col-md-1">
+                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: "" }}>Remove</button>
+                                </div>
+                                <div className="col-md-1">
+                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 50 }}>Chat</button>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-1">
+                                    <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
+                                </div>
+                                <div className="col-md-7 text-white mt-2 ml-1">
+                                    <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
+                                </div>
+                                <div className="col-md-1">
+                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: "" }}>Remove</button>
+                                </div>
+                                <div className="col-md-1">
+                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 50 }}>Chat</button>
                                 </div>
                             </div>
 

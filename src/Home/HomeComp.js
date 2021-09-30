@@ -7,6 +7,7 @@ import image from '../Images/yasir.jpeg'
 import PostEngagements from './PostEngagements';
 import './HomeComp.css'
 import Post from './Post'
+import './MobileHome.css'
 export default function HomeComp(props) {
 
     const {
@@ -48,10 +49,10 @@ export default function HomeComp(props) {
                             <div className="">
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Home</p>
+                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }} className="homeText">Home</p>
                                     </div>
                                     <div className="col-md-6">
-                                        <button className="btn btn-outline-primary mb-2 mt-2" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
+                                        <button className="btn btn-outline-primary mb-2 mt-2 postButton" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +63,7 @@ export default function HomeComp(props) {
                                             fontWeight: "bolder",
                                             display: "inline-block"
                                         }}>
-                                            <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
+                                            <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
@@ -74,7 +75,7 @@ export default function HomeComp(props) {
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
                                         <p style={{ color: "white", overflow: "" }}>
-                                            what ever a user write, appears here.what ever a user write, appears here.
+                                            what user writes, appears here.what user writes, appears here.
                                         </p>
                                     </div>
                                 </div>
@@ -89,8 +90,9 @@ export default function HomeComp(props) {
                                             fontWeight: "bolder",
                                             display: "inline-block"
                                         }}>
-                                            <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
+                                            <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
+                                        <h6 style={{ display: "inline", color: "grey" }}></h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
                                     <div className="col-md-1" style={{}}>
@@ -101,7 +103,7 @@ export default function HomeComp(props) {
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
                                         <p style={{ color: "white", overflow: "" }}>
-                                            what ever a user write, appears here.what ever a user write, appears here.
+                                            what user writes, appears here.what user writes, appears here.
                                         </p>
                                     </div>
                                 </div>

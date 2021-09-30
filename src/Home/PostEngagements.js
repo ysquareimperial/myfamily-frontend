@@ -50,7 +50,7 @@ export default function (props) {
                                 <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                             </div>
                             <div className="col-md-7 text-white mt-2 ml-1">
-                                <p>Yasir Ado Hassan</p>
+                                <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                             </div>
                         </div>
                     </ModalBody>
@@ -74,7 +74,7 @@ export default function (props) {
                                 <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                             </div>
                             <div className="col-md-7 text-white mt-2 ml-1">
-                                <p>Yasir Ado Hassan</p>
+                                <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                                 <p>Comment: <span>Comment appears here</span></p>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ export default function (props) {
                                 <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                             </div>
                             <div className="col-md-7 text-white mt-2 ml-1">
-                                <p>Yasir Ado Hassan </p>
+                                <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                             </div>
                             <div className="col-md-2">
                                 <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 45 }}>Share</button>

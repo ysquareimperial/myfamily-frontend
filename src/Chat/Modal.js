@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import profileimg from '../Images/yasir.jpeg'
+import { useHistory } from 'react-router'
 
 export default function MyModal({toggle, modal, type, contact}) {
     // const [modal, setModal] = useState(false);
     // const toggle = () => setModal(!modal);
+    const history = useHistory();
 
     return (
         <Modal isOpen={modal} toggle={toggle}>
@@ -22,10 +24,10 @@ export default function MyModal({toggle, modal, type, contact}) {
                     <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                 </div>
                 <div className="col-md-7 text-white mt-2 ml-1">
-                    <p>Yasir Ado Hassan</p>
+                    <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                 </div>
                 <div className="col-md-2">
-                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 70 }}>{type}</button>
+                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 70 }} onClick={() => history.push("chat-member")}>{type}</button>
                 </div>
             </div>
         </ModalBody>

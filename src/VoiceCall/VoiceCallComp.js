@@ -19,7 +19,7 @@ export default function VoiceCallComp() {
                         </div>
                         <div className="col-md-1"></div>
                     </div>
-                    <div className="row">
+                    <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
                             <div className="card" style={{ backgroundColor: "#04162C" }}>
