@@ -10,8 +10,9 @@
 }
 
 
-.col1, .col3 {
+.col1, .col3, .col55 {
     background-color: #04162C;
+    height: 150vh;
 }
 
 /* .col1, .col3 {

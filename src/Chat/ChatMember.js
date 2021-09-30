@@ -25,14 +25,7 @@ export default function ChatMember() {
                     </div>
 
                     <div className="row">
-                        <div className="col-md-2 "></div>
-                        <div className="col-md-4 bg-secondary mr-1" >
-                            <p style={{ float: 'left', marginLeft: 10, backgroundColor: '#0275d8', color: 'white' }}>cfdfkjdjfdjf</p>
-                        </div>
-                        <div className="col-md-4 bg-secondary">
-                            <p style={{ float: 'right', backgroundColor: '#0275d8', color: 'white' }}>cfdfkjdjfdjf</p>
-                        </div>
-                        <div className="col-md-2"></div>
+                        <div className="col-md-12" style={{marginTop:350}}></div>
                     </div>
 
                     <div className="row" style={{ backgroundColor: "#04162C", borderTopLeftRadius: 10, borderBottomTopRadius: 10 }}>

@@ -17,9 +17,8 @@ import Test from './Test'
 
 function App() {
   return (
-    <div>
+    <div className="body">
       <ToastProvider>
-        {/* <IndexPage /> */}
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/home"  component={IndexPage}/>

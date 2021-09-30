@@ -50,31 +50,7 @@ export default function VideoCallComp() {
                         </div>
                         <MyModal contact="Video Call" type="Call" toggle={toggle} modal={modal}/>
 
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        ghjk
+                      
                         <div className="col-md-1"></div>
                     </div>
                 </div>
