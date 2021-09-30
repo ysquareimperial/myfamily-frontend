@@ -98,7 +98,7 @@ export default function FamiliesComp() {
                 </div>
                 <div className="row">
                     <div className="col-md-1"></div>
-                    <div className="col-md-5">
+                    <div className="col-md-5 mb-3">
                         <div className="card" style={{ backgroundColor: "#04162C" }}>
                             <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                 Family Name will be here
@@ -111,8 +111,10 @@ export default function FamiliesComp() {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="col-md-1"></div>
                 </div>
+                
                 <div className="col-md-1"></div>
             </div>
         </div>

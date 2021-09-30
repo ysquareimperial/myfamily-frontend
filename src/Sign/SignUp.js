@@ -2,9 +2,9 @@ import React from 'react'
 import CustomInput from '../CustomFiles/CustomInput'
 export default function SignUp({ signUp, handleSignUpChange }) {
     return (
-        <div className="p-2 pt-1">
+            <>
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 p-3">
                     <div className="form-group">
                         <CustomInput className="form-control"
                             name="firstName"
@@ -15,7 +15,7 @@ export default function SignUp({ signUp, handleSignUpChange }) {
                         />
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-6 p-3">
                     <div className="form-group">
                         <CustomInput className="form-control"
                             name="lastName"
@@ -29,7 +29,7 @@ export default function SignUp({ signUp, handleSignUpChange }) {
             </div>
 
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 p-3">
                     <div className="form-group">
                         <CustomInput className="form-control"
                             name="email"
@@ -40,7 +40,7 @@ export default function SignUp({ signUp, handleSignUpChange }) {
                         />
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-6 p-3">
                     <div className="form-group">
                         <CustomInput className="form-control"
                             name="phone"
@@ -53,7 +53,7 @@ export default function SignUp({ signUp, handleSignUpChange }) {
                 </div>
             </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 p-3">
                     <div className="form-group">
                         <CustomInput className="form-control"
                             label="Date Of Birth"
@@ -65,7 +65,7 @@ export default function SignUp({ signUp, handleSignUpChange }) {
                     </div>
                 </div>
                 <div className="col-6">
-                    <div className="form-group">
+                    <div className="form-group p-3">
                         <CustomInput className="form-control"
                             label="Password"
                             name="password"
@@ -82,6 +82,6 @@ export default function SignUp({ signUp, handleSignUpChange }) {
                 you how we use cookies and related technologies in our <b className="text-primary" style={{ cursor: "pointer" }}>Cookies Policy</b>.
                 You may get SMS Notifications from us and can quit any time.
             </p>
-        </div>
+    </>
     )
 }

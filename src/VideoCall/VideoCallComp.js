@@ -1,6 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
+import MyModal from '../Chat/Modal';
 import { IoPeopleOutline, IoVideocamOutline, IoCallOutline } from 'react-icons/io5'
 export default function VideoCallComp() {
+
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
     return (
         <div>
             <div className="row">
@@ -14,7 +19,7 @@ export default function VideoCallComp() {
                         </div>
                         <div className="col-md-1"></div>
                     </div>
-                    <div className="row">
+                    <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
                             <div className="card" style={{ backgroundColor: "#04162C" }}>
@@ -25,7 +30,7 @@ export default function VideoCallComp() {
                                     <IoVideocamOutline size="5em" color="#0275d8" />
                                 </div>
                                 <div className="card-footer text-center">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }}>Choose a member</button>
+                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, width: 200 }} onClick={toggle}>Choose a member</button>
                                 </div>
                             </div>
                         </div>
@@ -43,6 +48,8 @@ export default function VideoCallComp() {
                                 </div>
                             </div>
                         </div>
+                        <MyModal contact="Video Call" type="Call" toggle={toggle} modal={modal}/>
+
                         <br></br>
                         <br></br>
                         <br></br>

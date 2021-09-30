@@ -1,15 +1,38 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import './HomePage.css'
-import image from '../HomePage/family1.jpg'
+// import image from '../HomePage/images/10.jpg'
 import SignInRep from '../Sign/SignInRep'
+import Images from './Images'
+import Quotes from './Quotes'
 
 
 export default function HomePage() {
+    const [image, setImage] = useState(null)
     const [modal, setModal] = useState(false);
+    const bgImage = Math.floor(Math.random() * Images.length)
+    //  console.log(Images[bgImage])
+    const quote = Math.floor(Math.random() * Quotes.length)
 
     const toggle = () => setModal(!modal);
+
+    // image = () => {
+    //     var bgImage = (Math.floor(Math.random() * 13))+ ".jpg;"
+    //     $('.cover').css('background-image',"../img/backgrounds/"+bgImage);
+    // }
+
+    const generateRandom = useCallback(() => {
+        
+    })
+
+    // useEffect(() => {
+    //     const bgImage = Math.floor(Math.random() * 10)
+    //     setImage([bgImage])
+        
+    // })
+
     return (
         <div>
+        
             <div className="row m-0 p-0" style={{}}>
                 <div className="col-md-5 pt-1 left">
                     <SignInRep />
@@ -19,17 +42,19 @@ export default function HomePage() {
                     position: "relative",
                     textAlign: "center"
                 }}>
-                    <img src={image} alt="myfamily" />
+                    <img src={Images[bgImage]} alt="myfamily" />
                     <div style={{
-                        position: "absolute", top: 200, left: 30,
-                        background: "rgba(128, 128, 128, 0.6)"
+                        position: "absolute", top: 450,
+                        background: "rgba(128, 128, 128, 0.6)",
+                        width:"100%"
                     }} className="border rounded">
-                        <div>
+                        <div style={{}}>
                             <h1 className="lead text-white" style={{ fontSize: 50 }}>myfamily</h1>
                             <h1 className="lead text-white p-3">
-                                “Family and friends are hidden treasures,
+                                {/* “Family and friends are hidden treasures,
                                 seek them and enjoy their riches.”
-                                <p className="text-white">–Wanda Hope Carter</p>
+                                <p className="text-white">–Wanda Hope Carter</p> */}
+                                {Quotes[quote]}
                             </h1>
                         </div>
                     </div>
