@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { IoTimeOutline } from 'react-icons/io5'
 import { GoLocation } from "react-icons/go";
-import {AiOutlineCalendar} from "react-icons/ai"
+import { AiOutlineCalendar } from "react-icons/ai"
 import profile from '../Images/yasir.jpeg'
-import CustomInput from '../CustomFiles/CustomInput';
+import CustomInput2 from '../CustomFiles/CustomInput2';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
+import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
 
 
 export default function EventsComp() {
@@ -44,7 +45,7 @@ export default function EventsComp() {
                     <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Create an Event</p>
                     <div className="row p-2">
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Event Name"
                                 name="eventName"
                                 type="text"
@@ -53,7 +54,7 @@ export default function EventsComp() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Event Time"
                                 name="eventTime"
                                 type="time"
@@ -62,7 +63,7 @@ export default function EventsComp() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Event Date"
                                 name="eventDate"
                                 type="date"
@@ -71,7 +72,7 @@ export default function EventsComp() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Event Venue"
                                 name="eventVenue"
                                 type="text"
@@ -101,7 +102,9 @@ export default function EventsComp() {
                     <div className="row">
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
-                            <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom:10 }}>
+                            <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Turn on Notification for events" />
+
+                            <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-2">
                                         <img src={profile} className="" alt="proifleimage" style={{ borderRadius: "" }} />
@@ -110,7 +113,7 @@ export default function EventsComp() {
                                         <h5>Naming Ceremony of Yasir</h5>
                                         <p style={{ color: "white", margin: 0, padding: 0 }}><GoLocation /> Minna Events Center, Nasarawa, Kano </p>
                                         <p style={{ color: "white", margin: 0, padding: 0 }}><IoTimeOutline /> 4:00 PM</p>
-                                        <p style={{ color: "white", margin: 0, padding: 0 }}><AiOutlineCalendar /> 12/12/2020</p>   
+                                        <p style={{ color: "white", margin: 0, padding: 0 }}><AiOutlineCalendar /> 12/12/2020</p>
                                     </div>
                                     <div className="col-md-1">
                                         <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: "right", marginTop: 5 }}>View</button>

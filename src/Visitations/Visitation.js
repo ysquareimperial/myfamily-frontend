@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { IoTimeOutline } from 'react-icons/io5'
 import { GoLocation } from "react-icons/go";
-import {AiOutlineCalendar} from "react-icons/ai"
-import CustomInput from '../CustomFiles/CustomInput';
+import { AiOutlineCalendar } from "react-icons/ai"
+import CustomInput2 from '../CustomFiles/CustomInput2';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
+import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
 
 import profile from '../Images/yasir.jpeg'
 export default function Visitation() {
@@ -43,7 +44,7 @@ export default function Visitation() {
                     <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Create a Visit</p>
                     <div className="row p-2">
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Family Member Name"
                                 name="fullName"
                                 type="text"
@@ -52,7 +53,7 @@ export default function Visitation() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Time"
                                 name="time"
                                 type="time"
@@ -61,7 +62,7 @@ export default function Visitation() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Date"
                                 name="date"
                                 type="date"
@@ -70,7 +71,7 @@ export default function Visitation() {
                             />
                         </div>
                         <div className="col-md-12 form-group" >
-                            <CustomInput className="form-control"
+                            <CustomInput2 className="form-control"
                                 label="Venue"
                                 name="venue"
                                 type="text"
@@ -92,7 +93,7 @@ export default function Visitation() {
                         <div className="col-md-7">
                             <div>
                                 <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Visitations</p>
-                                <p style={{ color: "#ffffff" }}>Enable Notifications</p>
+                                <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Turn on Notification for visits" />
                             </div>
                         </div>
                         <div className="col-md-3  pt-2">
@@ -110,8 +111,8 @@ export default function Visitation() {
                                         <p className='text-white' style={{ margin: 0, padding: 0 }}>Zaharadden</p>
                                         <p className="text-white" style={{ margin: 0, padding: 0 }}><GoLocation /> Minna Events Center, Nasarawa, Kano </p>
                                         <p className="text-white" style={{ margin: 0, padding: 0 }}><IoTimeOutline /> 4:00 PM</p>
-                                        <p style={{ color: "white", margin: 0, padding: 0 }}><AiOutlineCalendar /> 12/12/2020</p>   
-                                        
+                                        <p style={{ color: "white", margin: 0, padding: 0 }}><AiOutlineCalendar /> 12/12/2020</p>
+
                                     </div>
                                     <div className="col-md-1"></div>
                                 </div>
