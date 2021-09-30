@@ -63,9 +63,8 @@ export default function HomeComp(props) {
                                             fontWeight: "bolder",
                                             display: "inline-block"
                                         }}>
-                                            <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
+                                            <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
-                                        <h6 style={{ display: "inline", color: "grey" }}>@ysquareimperial, </h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
                                     <div className="col-md-1" style={{ float: 'right' }}>
@@ -76,7 +75,7 @@ export default function HomeComp(props) {
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
                                         <p style={{ color: "white", overflow: "" }}>
-                                            what ever a user write, appears here.what ever a user write, appears here.
+                                            what user writes, appears here.what user writes, appears here.
                                         </p>
                                     </div>
                                 </div>
@@ -91,9 +90,9 @@ export default function HomeComp(props) {
                                             fontWeight: "bolder",
                                             display: "inline-block"
                                         }}>
-                                            <IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan
+                                            <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
-                                        <h6 style={{ display: "inline", color: "grey" }}>@ysquareimperial, </h6>
+                                        <h6 style={{ display: "inline", color: "grey" }}></h6>
                                         <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
                                     <div className="col-md-1" style={{}}>
@@ -104,7 +103,7 @@ export default function HomeComp(props) {
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
                                         <p style={{ color: "white", overflow: "" }}>
-                                            what ever a user write, appears here.what ever a user write, appears here.
+                                            what user writes, appears here.what user writes, appears here.
                                         </p>
                                     </div>
                                 </div>

@@ -16,12 +16,12 @@ export default function IndexRightMenu() {
                     }} type="search" className="form-control" placeholder="Search a member" />
             </div>
             <div className="pt-2">
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
-                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />Ado Yasir Hassan</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
+                <h6 className="display-4" style={{ fontSize: 15 }}><IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h6>
             </div>
         </div>
         </>
