@@ -57,6 +57,7 @@ export default function SignUpRep() {
             if (data.success) {
                 alert("Successully Submited")
                 handle()
+                history.push("/home")
             }
         }
         )
