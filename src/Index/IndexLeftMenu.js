@@ -9,7 +9,7 @@ import './IndexPage.css'
 export default function IndexLeftMenu() {
     let date = new Date().getFullYear()
     return (
-        <div className="col1" style={{position:"fixed", width:"100%", height:"100%"}}>
+        <div className="col1" style={{position:"fixed"}}>
             <NavLink to='/home' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
@@ -54,7 +54,7 @@ export default function IndexLeftMenu() {
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoNotificationsCircleOutline size="1.5em" color="#0275d8" /> Notifications</h4>
             </NavLink> */}
-            <hr style={{ backgroundColor: "" }} className="bg-primary"></hr>
+            <hr style={{ width:360}} className="bg-primary"></hr>
             <p className="text-center" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
         </div>
     )

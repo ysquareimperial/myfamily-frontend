@@ -50,6 +50,7 @@ export default function VideoCallComp() {
                         </div>
                         <MyModal contact="Video Call" type="Call" toggle={toggle} modal={modal}/>
 
+                      
                         <div className="col-md-1"></div>
                     </div>
                 </div>

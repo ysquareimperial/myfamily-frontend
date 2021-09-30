@@ -20,20 +20,21 @@ import ViewFamily from '../Families/ViewFamily'
 import Visitation from '../Visitations/Visitation'
 import SettingsPrivacy from '../Settings/SettingsPrivacy'
 import IndexRightMenu from './IndexRightMenu'
+import FamilyTreeComp from '../FamilyTree/FamilyTreeComp'
 import './Mobile.css'
 import ChatMember from '../Chat/ChatMember'
 export default function IndexPage() {
     let date = new Date().getFullYear()
     return (
         <div className="row0">
-            
-                <div className="row row1 p-3 fixed-top mobileNavbar">
+            <br/><br/><br/><br/>
+                {/* <div className="row row1 p-3 fixed-top mobileNavbar">
                     <div className="col-md-1">
                         <Link to="/">
                             <img className="indxeimg" src={image} alt="mfLogo" />
                         </Link>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-7">
                         <Link to='/families'>
                             <h3 className="famName" style={{
                                 fontWeight: "bolder",
@@ -41,32 +42,28 @@ export default function IndexPage() {
                             }}>Family name will be here.</h3>
                         </Link>
                     </div>
-
-                    <div className="col-md-2">
-                        {/* <Link to='/profile'>
-                            <h5 className="hover mr-5 " style={{
-                                fontWeight: "bolder",
-                                display: "inline-block"
-                            }}>
-                                <IoPersonCircleOutline size="2em" color="#0275d8" /></h5>
-                        </Link> */}
-                    </div>
-                    <div className="col-md-5">
+                    <div className="col-md-4">
                         <Link to='/home/profile'>
-                            <h5 className="hover mr-5 " style={{
+                            <h5 className="hover mr-5" style={{
                                 fontWeight: "bolder",
-                                display: "inline-block"
-                                
-
+                                display: "inline-block",
+                                marginLeft:118
                             }}>
                                 <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name</h5>
                         </Link>
+                        <h5 className="hover" style={{
+                            fontWeight: "bolder",
+                            display: "inline-block",
+                            // marginLeft: 5,
+                            float:"right"
+                        }}>
+                            <GoSignOut size="1.7em" color="#0275d8" /></h5>
                         <Link to='/home/notifications'>
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
-                                marginLeft:60
-
+                                // marginLeft:5,
+                                float:"right"
                             }}>
                                 <IoNotificationsCircleOutline size="2em" color="#0275d8" /></h5>
                         </Link>
@@ -74,27 +71,24 @@ export default function IndexPage() {
                             <h5 className="hover" style={{
                                 fontWeight: "bolder",
                                 display: "inline-block",
-                                marginLeft: 5
+                                // marginLeft: 5,
+                                float:"right"
                             }}>
                                 <IoSettingsOutline size="1.7em" color="#0275d8" /></h5>
                         </Link>
-                        <h5 className="hover" style={{
-                            marginTop: 5,
-                            float: 'right'
-                        }}>
-                            <GoSignOut size="1.7em" color="#0275d8" /></h5>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="row" style={{marginTop:"90px"}}>
+                <div className="row" style={{marginTop:""}}>
                     <div className="col-md-3">
                         <IndexLeftMenu/>
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-md-6 col55" >
                         <Switch>
                             {/* <Route path="/" exact component={HomeComp} /> */}
                             <Route path="/home" exact component={HomeComp} />
                             <Route path="/home/families" component={FamiliesComp} />
+                            <Route path="/home/familyTree" component={FamilyTreeComp} />
                             <Route path="/home/viewFamily" component={ViewFamily}/> 
                             <Route path="/home/chat" exact component={ChatComp} />
                             <Route path="/home/chat-member" exact component={ChatMember} />
@@ -109,11 +103,10 @@ export default function IndexPage() {
                             <Route path="/home/settings & privacy" component={SettingsPrivacy} />
                         </Switch>
                     </div>
-                    <div className="col-md-2 col3">
+                    <div className="col-md-3 col3">
                         <IndexRightMenu />
                     </div>
                 </div>
-        
         </div >
     )
 }
