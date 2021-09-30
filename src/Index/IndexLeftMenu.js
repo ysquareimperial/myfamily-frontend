@@ -9,7 +9,7 @@ import './IndexPage.css'
 export default function IndexLeftMenu() {
     let date = new Date().getFullYear()
     return (
-        <div className="col1" style={{position:"fixed"}}>
+        <div className="col1">
             <NavLink to='/home' activeClassName="active">
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
