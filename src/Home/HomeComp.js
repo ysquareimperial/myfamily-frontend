@@ -75,7 +75,7 @@ export default function HomeComp(props) {
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
                                         <p style={{ color: "white", overflow: "" }}>
-                                            what user writes, appears here.what user writes, appears here.
+                                            what user writes, appears here! what user writes, appears here.
                                         </p>
                                     </div>
                                 </div>
