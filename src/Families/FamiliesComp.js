@@ -31,6 +31,7 @@ export default function FamiliesComp() {
             createFamily
         }
         console.log(obj)
+        setModal(!Modal)
     }
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -57,13 +58,25 @@ export default function FamiliesComp() {
                                     />
                                 </div>
                                 <div className="col-md-12 form-group">
-                                    <CustomInput
+                                    <CustomInput className="form-control"
                                         label="Family Image"
                                         name="familyImage"
                                         type="file"
                                         value={createFamily.familyImage}
                                         handleChange={handleCreateFamilyChange}
                                     />
+                                    {/* <label for="file" className="fileLabel">Choose Family Image</label>
+                                    <input
+                                        style={
+                                            {}
+                                        }
+                                        name="familyImage"
+                                        type="file"
+                                        id = "file"
+                                        accept="image/*"
+                                        value={createFamily.familyImage}
+                                        onChange={handleCreateFamilyChange}
+                                    /> */}
                                 </div>
                                 <div className="col-md-12 form-group">
                                     <label>About Family</label>
@@ -92,7 +105,7 @@ export default function FamiliesComp() {
                         </ModalBody>
                         <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#0b2e5c' }}>
                             <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Cancel</Button>
-                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Create</Button>
+                            <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={handleSubmit}>Create</Button>
                         </ModalFooter>
                     </Modal>
                 </div>
@@ -113,7 +126,7 @@ export default function FamiliesComp() {
                     </div>
 
                 </div>
-                
+
             </div>
         </div>
     )

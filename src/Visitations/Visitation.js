@@ -93,7 +93,7 @@ export default function Visitation() {
                         <div className="col-md-7">
                             <div>
                                 <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Visitations</p>
-                                <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Turn on Notification for visits" />
+                                <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Enable Notification for Visitations"/>
                             </div>
                         </div>
                         <div className="col-md-3  pt-2">

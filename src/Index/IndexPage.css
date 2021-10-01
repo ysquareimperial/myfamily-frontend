@@ -32,21 +32,40 @@
 
 .hover:hover {
     cursor: pointer;
-    background-color: #04162C;
-    border-radius: 20;
-    padding: 10;
+    color: #0275d8;
     /* border-bottom: 1px white solid; */
 }
 
 .famName:hover {
     cursor: pointer;
-    border-bottom: 1px white solid;
+    /* border-bottom: 1px white solid; */
+    color:#0275d8;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(255, 255, 255);
+    color: rgb(218, 192, 192);
 }
 
-.active {
-    background-color: red;
+.active1{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active_sidebar{
+    background-color:#010c1a;
+    border-radius: 50px;
+    padding-bottom: 0.5px;
+    padding-top: 0.5px;
+    margin-left:4px ;
+    cursor: pointer;
+    color: white;
+    width: 200px;
+
+}
+@media only screen and (max-width: 768px) {
+    .col1{
+        /* height: 200vh;
+        background-color: red; */
+    }
+
 }

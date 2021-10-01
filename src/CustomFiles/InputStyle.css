@@ -1,0 +1,17 @@
+/* input[type="file"] {
+    display: none;
+} */
+
+.fileLabel {
+    color: white;
+    width: 250px;
+    height: 60px;
+    background-color: #04162C;
+    border: 1px;
+    border-color: grey;
+    border-radius: 50px;
+    border-style: solid;
+    height: 45px;
+    padding:5px;
+    color: grey;
+}

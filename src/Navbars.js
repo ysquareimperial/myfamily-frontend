@@ -8,12 +8,12 @@ export default function Navbars() {
     return(
     <div className="row row1 p-3 fixed-top mobileNavbar">
                         <div className="col-md-1">
-                            <Link to="/">
+                            <Link to="/home">
                                 <img className="indxeimg" src={image} alt="mfLogo" />
                             </Link>
                         </div>
                         <div className="col-md-7">
-                            <Link to='/families'>
+                            <Link to='/home/families'>
                                 <h3 className="famName" style={{
                                     fontWeight: "bolder",
                                     display: "inline-block"
