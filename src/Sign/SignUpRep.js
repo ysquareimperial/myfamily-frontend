@@ -8,12 +8,6 @@ import { api_url } from '../redux/actions'
 
 export default function SignUpRep() {
     const history = useHistory();
-    // const query = useQuery()
-    // const next = query.get("next")
-    // const [setName] = useContext(UserContext);
-    // const [loadSpinner, setLoadSpinner] = useState(false);
-
-
 
     const [signUp, setSignUp] = useState({
         firstName: '',
@@ -52,14 +46,14 @@ export default function SignUpRep() {
     const handleSubmit = () => {
         signUp.query_type = 'insert'
         _postApi(`${api_url}/users`,
-        signUp,
-        (data) => {
-            if (data.success) {
-                alert("Successully Submited")
-                handle()
-                history.push("/home")
+            signUp,
+            (data) => {
+                if (data.success) {
+                    alert("Successully Submited")
+                    handle()
+                    history.push("/home")
+                }
             }
-        }
         )
     }
 
