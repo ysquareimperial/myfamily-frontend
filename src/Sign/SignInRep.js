@@ -64,7 +64,7 @@ export default function SignInRep() {
         (data) => {
           if (data.success) {
             _customNotify("Successfull Submited");
-            window.location ="/home";
+            window.location = "/home";
           } else {
             _customNotify(data.msg);
           }
