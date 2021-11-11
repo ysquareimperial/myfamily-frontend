@@ -4,6 +4,8 @@ import profileimg from '../Images/yasir.jpeg'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import image2 from '../Images/image.PNG'
 import CustomInput from '../CustomFiles/CustomInput';
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function ViewFamily() {
 
     const [modal, setModal] = useState(false);
@@ -18,6 +20,7 @@ export default function ViewFamily() {
         familyImage: '',
         familyAbout: ''
     })
+
     const reset = () => {
         setEditFamily({
             familyName: '',
@@ -26,6 +29,7 @@ export default function ViewFamily() {
         }
         )
     }
+
     const handleEditFamilyChange = ({ target: { name, value } }) => {
         setEditFamily(prev => ({ ...prev, [name]: value }))
     }
@@ -38,7 +42,7 @@ export default function ViewFamily() {
         console.log(obj)
     }
     return (
-        <div>
+        <div className="">
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalBody style={{ backgroundColor: "#04162C", color: 'white' }}>
                     <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Edit Family</p>
@@ -96,14 +100,14 @@ export default function ViewFamily() {
                         alignContent: "center"
                     }} type="search" className="form-control" placeholder="Search a user by name or username..." />
                     <div className="row mt-2">
-                        <div className="col-md-1">
+                        <div className="col-1">
                             <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                         </div>
-                        <div className="col-md-7 text-white mt-2 ml-1">
+                        <div className="col-7 text-white mt-2 ml-2">
                             <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                         </div>
-                        <div className="col-md-2">
-                            <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 70 }}>Add</button>
+                        <div className="col-2">
+                            <button className="view-add-button btn btn-outline-primary" style={{ borderRadius: 20 }}>Add</button>
                         </div>
                     </div>
                 </ModalBody>
@@ -112,67 +116,55 @@ export default function ViewFamily() {
                     <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle2}>Save</Button>
                 </ModalFooter>
             </Modal>
+
             <div className="row">
                 <div className="col-md-12 homeBorder">
                     <div className="row">
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
                             <div className="row">
-                                <div className="col-md-8">
-                                    <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Family Name</p>
+                                <div className="col-7">
+                                    <p className="family-name-text" style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Family Name</p>
                                 </div>
-                                <div className="col-md-4">
-                                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5 }}>Edit Family</button>
+                                <div className="col-5">
+                                    <button className="edit-family-button btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5 }}>Edit Family</button>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <img src={image2} alt="family image" style={{ borderColor: '#0275d8', borderRadius: 10, border: 1, borderStyle: 'solid' }} />
+                                    <img className="" src={image2} alt="family image" style={{ borderColor: '#0275d8', borderRadius: 10, border: 1, borderStyle: 'solid' }} />
                                 </div>
                             </div>
                             <div className="row mt-3 mb-3">
-                                <div className="col-md-8">
-                                    <h4>Members</h4>
+                                <div className="col-6">
+                                    <h4 className="members-text">Members</h4>
                                 </div>
-                                <div className="col-md-4">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: 'right' }} onClick={toggle2}>Add members</button>
+                                <div className="col-6">
+                                    <button className="add-members-button btn btn-outline-primary" style={{ borderRadius: 20, float: 'right' }} onClick={toggle2}>Add members</button>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-md-1">
+                                <div className="col-1">
                                     <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                                 </div>
-                                <div className="col-md-7 text-white mt-2 ml-1">
+                                <div className="col-5 text-white mt-2 ml-2">
                                     <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
                                 </div>
-                                <div className="col-md-1">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: "" }}>Remove</button>
+                                <div className="col-2">
+                                    <button className="remove-button btn btn-outline-primary mr-2" style={{ borderRadius: 20 }}>Remove</button>
                                 </div>
-                                <div className="col-md-1">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 50 }}>Chat</button>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-md-1">
-                                    <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
-                                </div>
-                                <div className="col-md-7 text-white mt-2 ml-1">
-                                    <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
-                                </div>
-                                <div className="col-md-1">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: "" }}>Remove</button>
-                                </div>
-                                <div className="col-md-1">
-                                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 50 }}>Chat</button>
+                                <div className="col-2">
+                                    <button className="view-fam-chat-button btn btn-outline-primary" style={{ borderRadius: 20, float: '' }}>Chat</button>
                                 </div>
                             </div>
-
                         </div>
                         <div className="col-md-1"></div>
                     </div>
                 </div>
             </div>
+
+            <br></br>
+            <MobileNavbar />
         </div>
     )
 }

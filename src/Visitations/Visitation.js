@@ -5,8 +5,10 @@ import { AiOutlineCalendar } from "react-icons/ai"
 import CustomInput2 from '../CustomFiles/CustomInput2';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
-
 import profile from '../Images/yasir.jpeg'
+import '../Index/Mobile.css'
+// import '../Index/IndexPage.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function Visitation() {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -90,20 +92,18 @@ export default function Visitation() {
                 <div className="col-md-12 homeBorder">
                     <div className="row">
                         <div className="col-md-1"></div>
-                        <div className="col-md-7">
-                            <div>
-                                <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Visitations</p>
-                                <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Enable Notification for Visitations"/>
-                            </div>
-                        </div>
-                        <div className="col-md-3  pt-2">
-                            <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: 'right' }} onClick={toggle}>Create a Visit</button>
-                        </div>
-                        <div className="col-md-1"></div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-1"></div>
                         <div className="col-md-10">
+                            <div className="row">
+                                <div className="col-7">
+                                    <div>
+                                        <p className="visitation-text"style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Visitations</p>
+                                        <CustomInput className="notification-switch" type="switch" id="exampleCustomSwitch" name="customSwitch" label="Enable Notifications" />
+                                    </div>
+                                </div>
+                                <div className="col-5  pt-2">
+                                    <button className="create-a-visit-button btn btn-outline-primary" style={{ borderRadius: 20, float: 'right' }} onClick={toggle}>Create a Visit</button>
+                                </div>
+                            </div>
                             <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-11">
@@ -124,12 +124,13 @@ export default function Visitation() {
                                     <div className="col-md-1"></div>
                                 </div>
                             </div>
-
                         </div>
                         <div className="col-md-1"></div>
                     </div>
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import MobileNavbar from '../MobileNavbar/MobileNavbar'
 export default function SettingsPrivacy(){
     return(
         <div>
@@ -15,6 +16,8 @@ export default function SettingsPrivacy(){
                 </div>
             </div>
         </div>
+            <br></br>
+        <MobileNavbar/>
         </div>
     )
 }

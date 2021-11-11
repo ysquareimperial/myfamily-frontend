@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { IoPeopleOutline, IoCallOutline } from 'react-icons/io5'
 import MyModal from '../Chat/Modal';
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function VoiceCallComp() {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -14,7 +16,7 @@ export default function VoiceCallComp() {
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
                             <div>
-                                <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Voice Call</p>
+                                <p className ="voice-call-text" style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Voice Call</p>
                             </div>
                         </div>
                         <div className="col-md-1"></div>
@@ -22,7 +24,7 @@ export default function VoiceCallComp() {
                     <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="private-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Private Call
                                 </div>
@@ -35,7 +37,7 @@ export default function VoiceCallComp() {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="family-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Family Call
                                 </div>
@@ -54,6 +56,9 @@ export default function VoiceCallComp() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            {/* <br></br> */}
+            <MobileNavbar/>
         </div >
     )
 }

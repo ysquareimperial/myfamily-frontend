@@ -4,6 +4,7 @@ import { GoFile } from 'react-icons/go'
 import { MdAttachFile, MdAudiotrack } from 'react-icons/md'
 import { RiVideoLine } from 'react-icons/ri'
 import CustomTextField from '../CustomFiles/CustomTextField'
+import '../Index/Mobile.css'
 export default function Post() {
     return (
         <div style={{borderRadius:10}}>
@@ -16,20 +17,20 @@ export default function Post() {
                         />
                     </div>
                     <div className="row text-white pb-2" >
-                        <div className="col-md-1" style={{ cursor: 'pointer' }}>
+                        <div className="col-1" style={{ cursor: 'pointer' }}>
                             <GoFile size="1.5em" color="#0275d8" />
                         </div>
-                        <div className="col-md-1" style={{ cursor: 'pointer' }}>
+                        <div className="col-1" style={{ cursor: 'pointer' }}>
                             <MdAudiotrack size="1.7em" color="#0275d8" />
                         </div>
-                        <div className="col-md-1" style={{ cursor: 'pointer' }}>
+                        <div className="col-1" style={{ cursor: 'pointer' }}>
                             <IoImage size="1.5em" color="#0275d8" />
                         </div>
-                        <div className="col-md-1" style={{ cursor: 'pointer' }}>
+                        <div className="col-1" style={{ cursor: 'pointer' }}>
                             <RiVideoLine size="1.7em" color="#0275d8" />
                         </div>
-                        <div className="col-md-8" style={{ cursor: 'pointer' }}>
-                            <button className="btn btn-outline-primary mb-2" style={{ borderRadius: 20, float: "right", width: 100 }}>Post</button>
+                        <div className="col-7" style={{ cursor: 'pointer' }}>
+                            <button className="post-button btn btn-outline-primary mb-2" style={{ borderRadius: 20, width: 100 }}>Post</button>
                         </div>
                     </div>
 
@@ -42,6 +43,7 @@ export default function Post() {
 
                 </div>
             </div>
+            
         </div>
     )
 }

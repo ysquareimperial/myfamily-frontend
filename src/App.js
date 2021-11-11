@@ -15,15 +15,15 @@ import ChatComp from './Chat/ChatComp'
 import Modall from './Modall';
 import Test from './Test'
 
+
 function App() {
   return (
     <div className="body">
       <ToastProvider>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/home"  component={IndexPage}/>
+          <Route path="/home" component={IndexPage} />
         </Switch>
-      
       </ToastProvider>
     </div>
   );

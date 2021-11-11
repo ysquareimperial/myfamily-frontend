@@ -6,12 +6,13 @@ import { NavLink, useLocation, useHistory } from 'react-router-dom'
 import { ImTree } from 'react-icons/im'
 import { IoWalkSharp, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
 import './IndexPage.css'
+import './Mobile.css'
 export default function IndexLeftMenu() {
     const location = useLocation()
     const history = useHistory()
     let date = new Date().getFullYear()
     return (
-        <div className="col1" style={{position:'fixed'}}>
+        <div className="col1 leftSidebar" style={{position:'fixed'}}>
             <div to='/home' onClick={() => history.push("/home")} className={`active1 ${location.pathname === "/home" && 'active_sidebar'}`}>
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoHomeOutline size="1.3em" color="#0275d8" /> Home</h4>
@@ -52,12 +53,8 @@ export default function IndexLeftMenu() {
                 <h4 className="display-4 pl-4 pt-3" style={{ fontSize: 20, color: "#ffff" }}>
                     <IoTimerOutline size="1.3em" color="#0275d8" /> Memories</h4>
             </div>
-            <hr style={{ width: 360 }} className="bg-primary"></hr>
-            <p className="text-center" style={{ color: "grey" }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
+            <hr style={{ width: 250 }} className="bg-primary"></hr>
+            <p className="text-left" style={{ color: "grey", marginLeft:5 }}>myfamily <span>&copy;</span> {date}. <span style={{ cursor: 'pointer' }}>Privacy.</span> <span style={{ cursor: 'pointer' }}>Cookies</span></p>
         </div>
     )
-}
-
-function NavBox () {
-    return 
 }

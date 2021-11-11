@@ -7,7 +7,8 @@ import image from '../Images/yasir.jpeg'
 import PostEngagements from './PostEngagements';
 import './HomeComp.css'
 import Post from './Post'
-import './MobileHome.css'
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function HomeComp(props) {
 
     const {
@@ -24,10 +25,10 @@ export default function HomeComp(props) {
                     {/* <ModalHeader toggle1={toggle1}>Missing Person Form</ModalHeader> */}
                     <ModalBody style={{ backgroundColor: "#04162C", borderColor: "#04162C" }}>
                         <div className="row">
-                            <div className='col-md-6'>
+                            <div className='col-6'>
                                 <h5>Add a new post</h5>
                             </div>
-                            <div className='col-md-6'>
+                            <div className='col-6'>
                                 <button className="btn btn-outline-primary mb-2" style={{ borderRadius: 20, float: "right", width: 100 }} onClick={toggle1}>Cancel</button>
                             </div>
                         </div>
@@ -48,29 +49,29 @@ export default function HomeComp(props) {
 
                             <div className="">
                                 <div className="row">
-                                    <div className="col-md-6">
-                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }} className="homeText">Home</p>
+                                    <div className="col-6 ">
+                                        <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }} className="homeText home-text">Home</p>
                                     </div>
-                                    <div className="col-md-6">
-                                        <button className="btn btn-outline-primary mb-2 mt-2 postButton" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
+                                    <div className="col-6 ">
+                                        <button className=" add-a-post-button btn btn-outline-primary mb-2 mt-2 postButton" style={{ borderRadius: 20, float: "right", width: "" }} onClick={toggle1}>Add a Post</button>
                                     </div>
                                 </div>
                             </div>
-                            <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
-                                <div className="row">
-                                    <div className="col-md-11">
+                            <div className="postContainer jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
+                                <div className="row postHeader">
+                                    <div className="col-10 postLeftCol">
                                         <h6 className="hover mr-1 " style={{
                                             fontWeight: "bolder",
                                             display: "inline-block"
                                         }}>
                                             <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
-                                        <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
                                     </div>
-                                    <div className="col-md-1" style={{ float: 'right' }}>
+                                    <div className="col-2 postRightCol" style={{ float: 'right' }}>
                                         <IoEllipsisVerticalOutline size="1.5em" color="#0275d8" />
                                     </div>
                                 </div>
+
                                 <div className="row">
                                     <div className="col-md-1"></div>
                                     <div className="col-md-11">
@@ -80,12 +81,12 @@ export default function HomeComp(props) {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <PostEngagements/>
+                                    <PostEngagements />
                                 </div>
                             </div>
-                            <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
-                                <div className="row">
-                                    <div className="col-md-11">
+                            <div className="postContainer jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
+                                <div className="row postHeader">
+                                    <div className="col-10 postLeftCol">
                                         <h6 className="hover mr-1 " style={{
                                             fontWeight: "bolder",
                                             display: "inline-block"
@@ -93,9 +94,9 @@ export default function HomeComp(props) {
                                             <IoPersonCircleOutline size="2em" color="#0275d8" />user's full name
                                         </h6>
                                         <h6 style={{ display: "inline", color: "grey" }}></h6>
-                                        <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6>
+                                        {/* <h6 style={{ display: "inline", color: "#0275d8" }}>(Yakasai's Family)</h6> */}
                                     </div>
-                                    <div className="col-md-1" style={{}}>
+                                    <div className="col-2 postRightCol" style={{ float: 'right' }}>
                                         <IoEllipsisVerticalOutline size="1.5em" color="#0275d8" />
                                     </div>
                                 </div>
@@ -109,7 +110,7 @@ export default function HomeComp(props) {
                                 </div>
                                 <img src={image} alt="post" style={{ height: 600 }} />
                                 <div className="row">
-                                   <PostEngagements/>
+                                    <PostEngagements />
                                 </div>
                             </div>
 
@@ -119,6 +120,8 @@ export default function HomeComp(props) {
 
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }

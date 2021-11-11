@@ -6,8 +6,8 @@ import profile from '../Images/yasir.jpeg'
 import CustomInput2 from '../CustomFiles/CustomInput2';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
-
-
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function EventsComp() {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -91,19 +91,16 @@ export default function EventsComp() {
                 <div className="col-md-12 homeBorder">
                     <div className="row">
                         <div className="col-md-1"></div>
-                        <div className="col-md-6">
-                            <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Events</p>
-                        </div>
-                        <div className="col-md-4">
-                            <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: "right", marginTop: 5 }} onClick={toggle}>Create an Event</button>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-1"></div>
                         <div className="col-md-10">
+                            <div className="row">
+                                <div className="col-6">
+                                    <p className="events-text" style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Events</p>
+                                </div>
+                                <div className="col-6">
+                                    <button className="create-an-event-button btn btn-outline-primary" style={{ borderRadius: 20, float: "right", marginTop: 5 }} onClick={toggle}>Create an Event</button>
+                                </div>
+                            </div>
                             <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Turn on Notification for events" />
-
                             <div className="jumbotron" style={{ backgroundColor: '#04162C', paddingTop: 10, paddingBottom: 10 }}>
                                 <div className="row">
                                     <div className="col-md-2">
@@ -123,14 +120,16 @@ export default function EventsComp() {
                                 <button className="btn btn-outline-primary" style={{ borderRadius: 20, float: "right", marginTop: 10 }}>Delete</button>
                             </div>
                         </div>
-                        <div className="col-md-1"></div>
                     </div>
-
                     <div className="col-md-1"></div>
                 </div>
-            </div>
 
+
+            </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
+
     )
 }
 

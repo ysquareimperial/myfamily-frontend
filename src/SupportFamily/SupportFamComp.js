@@ -1,4 +1,6 @@
 import React from 'react'
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar'
 export default function SupportFamComp() {
     return (
         <div>
@@ -7,11 +9,11 @@ export default function SupportFamComp() {
                     <div className="row">
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
-                            <div>
+                            <div className="support-family-div">
                                 <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Support Family</p>
                                 <p className="text-white">Support your family by donating some funds.</p>
                                 <button className="btn btn-outline-primary" style={{ borderRadius: 20 }}>Donate Fund</button>
-                                <p className="pt-2 text-white">The list of users below are those who donate to this family</p>
+                                <p className="pt-2 text-white">The list of users below are those who donated to this family</p>
                                 <table class="table table-striped text-white table-dark">
                                     <thead>
                                         <tr>
@@ -84,6 +86,8 @@ export default function SupportFamComp() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }

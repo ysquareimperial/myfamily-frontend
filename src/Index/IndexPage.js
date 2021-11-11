@@ -1,9 +1,9 @@
 import React from 'react'
 import './IndexPage.css'
-import image from './mf-logo.png'
-import { Link } from 'react-router-dom'
-import { GoSignOut } from 'react-icons/go'
-import { IoSettingsOutline, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
+// import image from './mf-logo.png'
+// import { Link } from 'react-router-dom'
+// import { GoSignOut } from 'react-icons/go'
+// import { IoSettingsOutline, IoNotificationsCircleOutline, IoVideocamOutline, IoChatbubblesOutline, IoPersonCircleOutline, IoHomeOutline, IoCallOutline, IoPeopleOutline, IoTimerOutline } from "react-icons/io5"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import HomeComp from '../Home/HomeComp'
 import FamiliesComp from '../Families/FamiliesComp'
@@ -83,7 +83,7 @@ export default function IndexPage() {
                 
                 <Navbars />
                 <div className="row" style={{marginTop:""}}>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col1">
                         <IndexLeftMenu/>
                     </div>
                     <div className="col-md-6 col55" >

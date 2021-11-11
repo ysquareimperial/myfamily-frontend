@@ -9,13 +9,13 @@ export default function (props) {
         buttonLabel,
         className
     } = props;
-   const [like,setlike] = useState({
-       count: 2,
-       action: false
-   })
-   const [comment,setcomment] = useState(3)
-   const [share,setshare] = useState(1)
-   const [download,setdownload] = useState(6)
+    const [like, setlike] = useState({
+        count: 2,
+        action: false
+    })
+    const [comment, setcomment] = useState(3)
+    const [share, setshare] = useState(1)
+    const [download, setdownload] = useState(6)
     const [modal1, setModal1] = useState(false);
     const [modal3, setModal3] = useState(false);
     const [modal4, setModal4] = useState(false);
@@ -26,10 +26,10 @@ export default function (props) {
     const toggle3 = () => setModal3(!modal3);
     const toggle4 = () => setModal4(!modal4);
     const toggle5 = () => setModal5(!modal5);
-    const handleCommentChange = () =>{setcomment(prev=>prev+1)}
-    const handleLikeChange = () =>{setlike(prev=>({...prev,count:prev.count+1,action:true}))}
-    const handleShareChange = () =>{setshare(prev=>prev+1)}
-    const handleDownloadChange = () =>{setdownload(prev=>prev+1)}
+    const handleCommentChange = () => { setcomment(prev => prev + 1) }
+    const handleLikeChange = () => { setlike(prev => ({ ...prev, count: prev.count + 1, action: true })) }
+    const handleShareChange = () => { setshare(prev => prev + 1) }
+    const handleDownloadChange = () => { setdownload(prev => prev + 1) }
     return (
         <>
             <div>
@@ -136,8 +136,8 @@ export default function (props) {
                 </Modal>
             </div>
             <div className="col mt-2 text-white text-center">
-                {like.action?<IoHeart color="#0275d8" size="1.5em" onClick={handleLikeChange} />:<IoHeartOutline color="#0275d8" size="1.5em" onClick={handleLikeChange} />} <span className="postEngagements" onClick={toggle1} >{like.count}</span>
-                
+                {like.action ? <IoHeart color="#0275d8" size="1.5em" onClick={handleLikeChange} /> : <IoHeartOutline color="#0275d8" size="1.5em" onClick={handleLikeChange} />} <span className="postEngagements" onClick={toggle1} >{like.count}</span>
+
             </div>
             <div className="col mt-2 text-white text-center">
                 <IoChatboxEllipsesOutline color="#0275d8" size="1.5em" onClick={handleCommentChange} /> <span className="postEngagements" onClick={toggle3}  >{comment}</span>

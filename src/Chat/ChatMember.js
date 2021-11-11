@@ -3,6 +3,7 @@ import { IoPeopleOutline, IoEllipsisVerticalOutline } from 'react-icons/io5'
 import { AiOutlineSend } from 'react-icons/ai'
 import { IoMdAdd } from 'react-icons/io'
 import profileimg from '../Images/yasir.jpeg'
+import MobileNavbar from '../MobileNavbar/MobileNavbar'
 
 export default function ChatMember() {
     return (
@@ -43,6 +44,8 @@ export default function ChatMember() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }

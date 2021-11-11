@@ -20,18 +20,18 @@ export default function MyModal({toggle, modal, type, contact}) {
                 alignContent: "center"
             }} type="search" className="form-control" placeholder="Search a user by name or username..." />
             <div className="row mt-2">
-                <div className="col-md-1">
+                <div className="col-1">
                     <img src={profileimg} style={{ borderRadius: 100, height: 40, width: 40 }} />
                 </div>
-                <div className="col-md-7 text-white mt-2 ml-1">
-                    <p>Yasir Ado Hassan <span className="text-secondary"></span></p>
+                <div className="col-7 text-white mt-2 ml-1">
+                    <p className="chat-full-name">Yasir Ado Hassan <span className="text-secondary"></span></p>
                 </div>
-                <div className="col-md-2">
-                    <button className="btn btn-outline-primary" style={{ borderRadius: 20, marginLeft: 70 }} onClick={() => history.push("chat-member")}>{type}</button>
+                <div className="col-4">
+                    <button className=" chat-chat-button btn btn-outline-primary" style={{ borderRadius: 20 }} onClick={() => history.push("chat-member")}>{type}</button>
                 </div>
             </div>
         </ModalBody>
-        {/* <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#0b2e5c' }}>
+        {/* <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#x0b2e5c' }}>
             <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle2}>Cancel</Button>
             <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle2}>Save</Button>
         </ModalFooter> */}

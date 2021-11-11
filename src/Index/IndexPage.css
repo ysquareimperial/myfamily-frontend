@@ -1,5 +1,6 @@
 .row0 {
     overflow: hidden;
+    /* margin-top:86px; */
 }
 
 .row1 {
@@ -9,11 +10,14 @@
     top: 0; */
 }
 
+@media only screen and (min-width: 768px) {
 
-.col1, .col3, .col55 {
-    background-color: #04162C;
-    height: 150vh;
+    .col1, .col3, .col55 {
+        background-color: #04162C;
+        height: 150vh;
+    }
 }
+
 
 /* .col1, .col3 {
     background-color: #0c284b;
@@ -62,10 +66,4 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px;
 
 }
-@media only screen and (max-width: 768px) {
-    .col1{
-        /* height: 200vh;
-        background-color: red; */
-    }
 
-}

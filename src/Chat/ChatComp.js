@@ -3,6 +3,8 @@ import { IoPeopleOutline } from 'react-icons/io5'
 // import { useState } from 'react';
 import profileimg from '../Images/yasir.jpeg'
 import MyModal from './Modal';
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 
 export default function ChatComp() {
     const [modal, setModal] = useState(false);
@@ -16,7 +18,7 @@ export default function ChatComp() {
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
                             <div>
-                                <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Chat</p>
+                                <p className="chat-text" style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Chat</p>
                             </div>
                         </div>
                         <div className="col-md-1"></div>
@@ -24,7 +26,7 @@ export default function ChatComp() {
                     <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="private-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Private Chat
                                 </div>
@@ -38,7 +40,7 @@ export default function ChatComp() {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="family-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Family Chat
                                 </div>
@@ -56,6 +58,8 @@ export default function ChatComp() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }

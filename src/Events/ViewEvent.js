@@ -2,6 +2,7 @@ import React from 'react'
 import { IoTimeOutline, IoCalendarClearOutline, IoPeopleOutline, IoEllipsisVerticalOutline, IoPersonOutline, IoPricetagsOutline } from 'react-icons/io5'
 import { GoLocation } from "react-icons/go";
 import profile from '../Images/yasir.jpg'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function VeiwEvent() {
     return (
         <div>
@@ -39,7 +40,8 @@ export default function VeiwEvent() {
 
                 </div>
             </div>
-
+            <br></br>
+            <MobileNavbar />
         </div>
     )
 }

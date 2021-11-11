@@ -12,11 +12,13 @@ import classnames from 'classnames';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Media from './MediaTab';
 import ProfileTab from './ProfileTab';
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function Profile(profile, handleProfileChange) {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
-    
+
     return (
         <div>
             <div className="row">
@@ -25,11 +27,11 @@ export default function Profile(profile, handleProfileChange) {
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
                             <div className="row">
-                                <div className="col-md-8">
-                                    <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Profile</p>
+                                <div className="col-6">
+                                    <p className="profile-text" style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Profile</p>
                                 </div>
-                                <div className="col-md-4">
-                                    <button className="btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5 }}>Edit Profile</button>
+                                <div className="col-6">
+                                    <button className="edit-profile-button btn btn-outline-primary" onClick={toggle} style={{ borderRadius: 20, float: "right", marginTop: 5 }}>Edit Profile</button>
                                 </div>
                             </div>
                             <div className="jumbotron p-2" style={{ backgroundColor: '#04162C' }}>
@@ -40,53 +42,55 @@ export default function Profile(profile, handleProfileChange) {
                                         </div>
                                         <div className="col-md-8">
                                             <div class="card-body text-right">
-                                                <h5 className="card-title" style={{ lineHeight: 0.3, color: "white" }} >Yasir Ado Hassan</h5>
-                                                <p className="card-text" style={{ color: "white" }}></p>
-                                                <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
-                                                <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
-                                                <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
-                                                <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
+                                                <div className="about-user">
+                                                    <h5 className="card-title" style={{ lineHeight: 0.3, color: "white" }} >Yasir Ado Hassan</h5>
+                                                    <p className="card-text" style={{ color: "white" }}></p>
+                                                    <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
+                                                    <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
+                                                    <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
+                                                    <p className="card-text" style={{ lineHeight: 0.3, color: "white" }}>About the user</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="card-body">
                                         <div className="row">
-                                            <div className="col-md-5">
-                                                <p className="text-white" style={{ lineHeight: 0.5 }}><AiTwotoneMail size="1.5em" color="#ffff" />  Email Address</p>
+                                            <div className="col-2">
+                                                <p className="text-white" style={{ lineHeight: 0.5 }}><AiTwotoneMail size="1.5em" color="#ffff" /></p>
                                             </div>
-                                            <div className="col-md-7">
+                                            <div className="col-10">
                                                 <p className="text-white" style={{ lineHeight: 0.5, textAlign: "right" }}>ysquare.theimperial@gmail.com</p>
                                             </div>
                                         </div><hr className="bg-primary mt-0  pt-0"></hr>
                                         <div className="row">
-                                            <div className="col-md-5">
-                                                <p className="text-white" style={{ lineHeight: 0.5 }}><AiOutlinePhone size="1.5em" color="#ffff" /> Mobile Number</p>
+                                            <div className="col-2">
+                                                <p className="text-white" style={{ lineHeight: 0.5 }}><AiOutlinePhone size="1.5em" color="#ffff" /></p>
                                             </div>
-                                            <div class="col-md-7">
+                                            <div class="col-10">
                                                 <p className="text-white" style={{ lineHeight: 0.5, textAlign: "right" }}>098765434567</p>
                                             </div>
                                         </div><hr className="bg-primary mt-0  pt-0"></hr>
                                         <div className="row">
-                                            <div className="col-md-5">
-                                                <p className="text-white" style={{ lineHeight: 0.5 }}><GoLocation size="1.5em" color="#ffff" /> Location</p>
+                                            <div className="col-2">
+                                                <p className="text-white" style={{ lineHeight: 0.5 }}><GoLocation size="1.5em" color="#ffff" /></p>
                                             </div>
-                                            <div className="col-md-7">
+                                            <div className="col-10">
                                                 <p className="text-white" style={{ lineHeight: 0.5, textAlign: "right" }}>Kano, Kano Nigeria</p>
                                             </div>
                                         </div><hr className="bg-primary mt-0  pt-0"></hr>
                                         <div className="row">
-                                            <div className="col-md-5">
-                                                <p className="text-white" style={{ lineHeight: 0.5 }}><FaBirthdayCake size="1.5em" color="#ffff" /> Birthday</p>
+                                            <div className="col-2">
+                                                <p className="text-white" style={{ lineHeight: 0.5 }}><FaBirthdayCake size="1.5em" color="#ffff" /></p>
                                             </div>
-                                            <div className="col-md-7">
+                                            <div className="col-10">
                                                 <p className="text-white" style={{ lineHeight: 0.5, textAlign: "right" }}>0 Jan 2020</p>
                                             </div>
                                         </div><hr className="bg-primary mt-0  pt-0"></hr>
                                         <div className="row">
-                                            <div className="col-md-5">
-                                                <p className="text-white" style={{ lineHeight: 0.5 }}><IoPeopleOutline size="1.5em" color="#ffff" /> Family</p>
+                                            <div className="col-2">
+                                                <p className="text-white" style={{ lineHeight: 0.5 }}><IoPeopleOutline size="1.5em" color="#ffff" /></p>
                                             </div>
-                                            <div className="col-md-7">
+                                            <div className="col-10">
                                                 <p className="text-white" style={{ lineHeight: 0.5, textAlign: "right" }}>Yakasai's Family</p>
                                             </div>
                                         </div><hr className="bg-primary mt-0  pt-0"></hr>
@@ -102,7 +106,7 @@ export default function Profile(profile, handleProfileChange) {
             </div>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalBody style={{ backgroundColor: "#04162C", color: 'white' }}>
-                    <p className="text-white" style={{ fontWeight: "bold", fontSize: 20}}>Edit Profile</p>
+                    <p className="text-white" style={{ fontWeight: "bold", fontSize: 20 }}>Edit Profile</p>
                     <div className="row">
                         <div className="col-md-6 form-group">
                             <CustomInput
@@ -195,12 +199,13 @@ export default function Profile(profile, handleProfileChange) {
                         </div>
                     </div>
                 </ModalBody>
-                <ModalFooter style={{ backgroundColor: "#04162C", borderColor:'#0b2e5c' }}>
+                <ModalFooter style={{ backgroundColor: "#04162C", borderColor: '#0b2e5c' }}>
                     <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Cancel</Button>
                     <Button style={{ borderRadius: 20 }} color="outline-primary" onClick={toggle}>Save</Button>
                 </ModalFooter>
             </Modal>
-
+            <br></br>
+<MobileNavbar/>
         </div>
     )
 }

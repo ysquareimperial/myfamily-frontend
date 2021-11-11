@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import MyModal from '../Chat/Modal';
 import { IoPeopleOutline, IoVideocamOutline, IoCallOutline } from 'react-icons/io5'
+import '../Index/Mobile.css'
+import MobileNavbar from '../MobileNavbar/MobileNavbar';
 export default function VideoCallComp() {
 
     const [modal, setModal] = useState(false);
@@ -14,7 +16,7 @@ export default function VideoCallComp() {
                         <div className="col-md-1"></div>
                         <div className="col-md-10">
                             <div>
-                                <p style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Video Call</p>
+                                <p className="video-call-text"style={{ fontWeight: "bold", fontSize: 30, color: "#ffffff" }}>Video Call</p>
                             </div>
                         </div>
                         <div className="col-md-1"></div>
@@ -22,7 +24,7 @@ export default function VideoCallComp() {
                     <div className="row mb-3">
                         <div className="col-md-1"></div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="private-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Private Call
                                 </div>
@@ -35,7 +37,7 @@ export default function VideoCallComp() {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <div className="card" style={{ backgroundColor: "#04162C" }}>
+                            <div className="private-chat-card card" style={{ backgroundColor: "#04162C" }}>
                                 <div className="card-header text-white text-center" style={{ fontWeight: 'bold' }}>
                                     Family Call
                                 </div>
@@ -55,6 +57,8 @@ export default function VideoCallComp() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <MobileNavbar/>
         </div>
     )
 }
