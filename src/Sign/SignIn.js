@@ -11,10 +11,10 @@ export default function SignIn({ signIn, handleSignInChange, handleSubmit }) {
     return (
         <div style={{}}>
             <CustomInput
-                name="userName"
+                name="email"
                 type="text"
                 placeholder="Email/User Name/Mobile Number"
-                value={signIn.userName}
+                value={signIn.email}
                 handleChange={handleSignInChange}
 
             />

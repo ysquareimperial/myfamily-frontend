@@ -1,6 +1,6 @@
 import React from 'react'
 import CustomInput from '../CustomFiles/CustomInput'
-export default function SignUp({ signUp, handleSignUpChange }) {
+export default function SignUp({ signUp, handleSignUpChange }) { 
     return (
             <>
             <div className="row">

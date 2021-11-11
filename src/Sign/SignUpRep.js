@@ -2,20 +2,12 @@ import React, { useState, useContext } from 'react'
 import SignUp from './SignUp'
 import CustomButton from '../CustomFiles/CustomButton'
 import { useHistory } from 'react-router'
-import useQuery from "../hooks/useQuery"
-import { UserContext } from "../contextApi/user_context";
-
-import { api } from "../api"
+import { _postApi } from '../redux/actions/api'
+import { api_url } from '../redux/actions'
 
 
 export default function SignUpRep() {
     const history = useHistory();
-    // const query = useQuery()
-    // const next = query.get("next")
-    // const [setName] = useContext(UserContext);
-    // const [loadSpinner, setLoadSpinner] = useState(false);
-
-
 
     const [signUp, setSignUp] = useState({
         firstName: '',
@@ -23,7 +15,8 @@ export default function SignUpRep() {
         email: '',
         phone: '',
         dateOfBirth: '',
-        password: ''
+        password: '',
+        query_type: 'insert'
     })
 
     const reset = () => {
@@ -41,13 +34,27 @@ export default function SignUpRep() {
         setSignUp(prev => ({ ...prev, [name]: value }))
     }
 
-    const handleSubmit = () => {
-        
+    const handle = () => {
+
         reset()
         let obj = {
             signUp
         }
         console.log(obj)
+    }
+
+    const handleSubmit = () => {
+        signUp.query_type = 'insert'
+        _postApi(`${api_url}/users`,
+            signUp,
+            (data) => {
+                if (data.success) {
+                    alert("Successully Submited")
+                    handle()
+                    history.push("/home")
+                }
+            }
+        )
     }
 
     return (
