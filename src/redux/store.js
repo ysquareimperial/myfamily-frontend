@@ -1,16 +1,8 @@
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer  from "./conterSlice";
 
-import reducers from './reducers';
-
-// const createStoreWithMiddleware = applyMiddleware(thunk, logger)(createStore);
-
-const createStoreWithMiddleware =
-  process.env.NODE_ENV === 'development'
-    ? applyMiddleware(thunk, logger)(createStore)
-    : applyMiddleware(thunk)(createStore);
-
-const store = createStoreWithMiddleware(reducers);
-
-export default store;
+export default configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
